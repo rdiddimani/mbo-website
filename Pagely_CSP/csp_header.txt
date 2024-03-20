@@ -1,0 +1,63 @@
+default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:
+https://go.mbopartners.com/analytics/ https://cse.expertrec.com/ https://clients1.google.com/ https://www.mbopartners.com/
+https://www2.mbopartners.com/ https://go.mbopartners.com/ https://s29814.pcdn.co
+https://cmp.osano.com/ https://www.googletagmanager.com
+https://consent.trustarc.com https://www.google.com https://cse.google.com
+https://cdnjs.cloudflare.com https://*.linkedin.com/ https://www.linkedin.com platform.linkedin.com
+static-src.linkedin.com cdn.lms.linkedin.com https://ws.zoominfo.com/pixel
+https://fast.wistia.com/assets/external/ https://snap.licdn.com
+https://ws.zoominfo.com/pixel/6182e1822a7f11001b1fe727
+https://fast.wistia.com/embed/medias/ https://pi.pardot.com/video/
+https://mbopartners.wistia.com/medias/ https://*.jazz.co/
+https://app.jazz.co/widgets/basic/create/mbopartners/
+https://maps.googleapis.com/ https://platform.twitter.com/
+https://partner.googleadservices.com/ https://consent.api.osano.com/
+https://*.wistia.com/ https://*.wistia.net/ https://src.litix.io/
+https://e.infogram.com/; worker-src 'self' blob:; connect-src 'self'
+https://expertrec.com/ https://www.google-analytics.com/ https://pagead2.googlesyndication.com/
+https://mbo.my.salesforce-sites.com/ https://*.litix.io/ https://*.wistia.com/
+https://*.wistia.net/ https://*.algolia.net/ https://fast.wistia.com/
+https://connect-api.mbopartners.com https://connect-api-qa.mbopartners.com/
+https://maps.googleapis.com https://px.ads.linkedin.com/wa/
+https://*.linkedin.com/wa/ https://*.linkedin.com/ https://analytics.google.com
+https://s29814.pcdn.co https://consent.api.osano.com/record
+https://stats.g.doubleclick.net/ https://ws.zoominfo.com/pixel/collect
+https://www.google.co.in/ads/ https://www.google.com/pagead/
+https://googleads.g.doubleclick.net/pagead/ https://pipedream.wistia.com/
+https://distillery.wistia.com/ https://fast.wistia.com/embed/medias/
+https://embed-cloudfront.wistia.com/deliveries/ https://yoast.com/feed/widget/
+https://ws.zoominfo.com/; font-src 'self' data: https://*.mbopartners.com/ https://www.mbopartners.com/ https://*.wistia.com/ https://cdnjs.cloudflare.com/
+https://s29814.pcdn.co https://fonts.gstatic.com/ https://pro.fontawesome.com/
+https://use.fontawesome.com/ https://consent.trustarc.com platform.linkedin.com
+static-src.linkedin.com https://fast.wistia.com/assets/external/fonts/; img-src
+'self' data:  https://www.adsensecustomsearchads.com/ https://*.mbopartners.com/ https://www.googletagmanager.com/
+https://*.linkedin.com/ https://*.wistia.com/ https://*.wistia.net/
+https://consent-pref.trustarc.com/defaultconsentmanager/ https://s29814.pcdn.co
+https://lh3.googleusercontent.com https://s31396.p1123.sites.pressdns.com
+https://consent.trustarc.com platform.linkedin.com static-src.linkedin.com
+https://px4.ads.linkedin.com https://px.ads.linkedin.com/collect
+https://www.google.co.in/ads/ https://www.linkedin.com/px/
+https://secure.gravatar.com/avatar/ https://fast.wistia.com/assets/
+https://embed-ssl.wistia.com/deliveries/ https://app.jazz.co/img/v1.1/logos/
+https://www.comparably.com/static/skins/comparably_light/
+https://*.comparably.com/ https://fast.wistia.com/embed/medias/
+https://images.comparably.com/companies/mbo-partners/share-badge/
+https://images.comparably.com/companies/mbo-partners/share-badge/medium-alt/leadership-score
+https://cdnassets.pagely.com/ https://www.google.com/
+https://clients1.google.com/ *.google.com/ *.gstatic.com; media-src 'self' blob:
+data: https://www.mbopartners.com/ https://ssl.gstatic.com/dictionary/static/
+https://*.wistia.com/ https://*.wistia.net/; style-src 'self' 'unsafe-inline' https://use.fontawesome.com/ https://static.mbopartners.com/portal/colors/font-roboto-slab.css https://pro.fontawesome.com/releases/v5.15.4/css/all.css https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css https://www.google.com/cse/static/element/8435450f13508ca1/default+en.css https://www.google.com/cse/static/style/look/v4/default.css https://fonts.googleapis.com/  https://s29814.pcdn.co platform.linkedin.com static-src.linkedin.com 
+https://use.fontawesome.com/releases/ https://fast.wistia.com/; 
+style-src-elem 'unsafe-inline' https://use.fontawesome.com/ https://static.mbopartners.com/portal/colors/font-roboto-slab.css https://s31396.p1123.sites.pressdns.com
+https://cdnjs.cloudflare.com/ https://www.google.com
+https://consent.trustarc.com https://s29814.pcdn.co https://www.mbopartners.com
+https://fonts.googleapis.com/ https://pro.fontawesome.com/
+https://use.fontawesome.com/releases/v6.5.1/css/
+https://cdnjs.cloudflare.com/ajax/libs/apexcharts/; base-uri 'self'; form-action
+'self' https://www2.mbopartners.com https://go.mbopartners.com/; frame-src https://mbopartners.co1.qualtrics.com/ https://www.mbopartners.com/
+https://www2.mbopartners.com https://go.mbopartners.com/ https://s31396.p1123.sites.pressdns.com
+https://e.infogram.com/ https://go.mbopartners.com/ https://fast.wistia.com/
+https://fast.wistia.net/ https://submit-irm.trustarc.com/
+https://td.doubleclick.net/ https://consent-pref.trustarc.com/
+https://platform.twitter.com/ https://www.adsensecustomsearchads.com/
+https://consent.api.osano.com/;

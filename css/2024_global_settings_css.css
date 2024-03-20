@@ -1,0 +1,307 @@
+/* MBO Partners Website Refresh March-2024 style here  */
+:root {
+  --color-primary-100: #f5f3f7;
+  --color-primary-200: #eae9f2;
+  --color-primary-300: #a199c2;
+  --color-primary-400: #6855b4;
+  --color-primary-500: #483981;
+  --color-primary-600: #352281;
+  --color-primary-700: #211551;
+  --color-primary-800: #22135e;
+  --color-primary-900: #150b3b;
+
+  --color-primary-tint-100: rgba(161, 153, 194, 0.1019607843);
+  --color-primary-tint-200: rgba(161, 153, 194, 0.1490196078);
+  --color-primary-tint-500: rgba(161, 153, 194, 0.5019607843);
+  --color-primary-tint-600: #5e38ba;
+  --color-secondary-100: #d5f7ff;
+  --color-secondary-200: #00b7e0;
+  --color-secondary-300: #0095b8;
+  --color-secondary-400: #007f9c;
+  --color-secondary-500: #07677d;
+  --color-secondary-600: #00576b;
+  --color-secondary-700: #044655;
+  --color-secondary-tint-200: rgba(213, 247, 255, 0.2);
+  --color-secondary-tint-500: rgba(213, 247, 255, 0.5019607843);
+
+  --color-action-100: #d6e3ff;
+  --color-action-200: #6697ff;
+  --color-action-300: #3270eb;
+  --color-action-400: #1559ea;
+  --color-action-500: #1350d3;
+  --color-action-600: #1046b8;
+  --color-action-700: #0b3ba4;
+
+  --color-border-default: #d4d4d4;
+  --color-success-100: #bae3cd;
+  --color-success-200: #1ed773;
+  --color-success-400: #38c08f; /* added manually  */
+  --color-success-500: #008c40;
+  --color-success-900: #026931;
+  --color-attention-100: #f4d3bf;
+  --color-attention-500: #f37026;
+  --color-attention-900: #d9550a;
+  --color-error-100: #fbeded;
+  --color-error-500: #ca313e;
+  --color-error-900: #b41320;
+  --color-neutrals-100: #f3f3f4;
+  --color-neutrals-200: #b8b3bc;
+  --color-neutrals-300: rgba(6, 24, 62, 0.5019607843);
+  --color-neutrals-400: #575463;
+  --color-neutrals-500: rgba(16, 10, 39, 0.7490196078);
+  --color-neutrals-900: #100a27;
+  --color-neutrals-white-150: rgba(255, 255, 255, 0.1490196078);
+  --color-neutrals-white-300: rgba(255, 255, 255, 0.3019607843);
+  --color-neutrals-white-600: rgba(255, 255, 255, 0.6);
+  --color-neutrals-white-850: rgba(255, 255, 255, 0.8509803922);
+  --color-neutrals-white-900: #ffffff;
+  --color-white: #ffffff;
+  --color-transparent: transparent;
+
+  /* Custom added  */
+  --ff-roboto: "Roboto", sans-serif;
+  --ff-museo300: "Museo Slab 300", sans-serif;
+  --ff-museo500: "Museo Slab 500", sans-serif;
+
+  /* local scope variables */
+
+  --_ff-display300: var(--ff-museo300);
+  --_ff-display500: var(--ff-museo500);
+  --_ff-body: var(--ff-roboto);
+
+  /* heading variant variable */
+  --_heading-primary: var(--color-primary-600);
+  --_heading-secondary: var(--color-secondary-600);
+  --_heading-action: var(--color-action-600);
+  --_heading-white: var(--color-white);
+  --_heading-success: var(--color-success-900);
+  --_heading-error: var(--color-error-900);
+
+  /* Link variables */
+
+  --_link-color: var(--color-primary-600);
+  --_link-color-hover: var(--color-primary-400);
+  --_link-color-white: var(--color-white);
+
+  /* Button variables */
+  --_btn-radius: var(4px);
+  --_btn-color-white: var(--color-white);
+
+  --_btn-padding-lg: 8px 16px;
+  --_btn-padding-md: 8px 12px;
+  --_btn-padding-sm: 4px 12px;
+  /* default variable */
+  --_btn-bg-default: transparent;
+  --_btn-bg-default-hover: var(--color-primary-200);
+  --_btn-bg-default-active: transparent;
+  --_btn-color-default: var(--color-primary-600);
+  --_btn-color-default-hover: var(--color-primary-400);
+  --_btn-color-default-active: var(--color-primary-800);
+
+  /* back btn variables */
+  --_btn-bg-back: transparent;
+  --_btn-color-back: var(--color-primary-600);
+  --_btn-color-back-hover: var(--color-primary-400);
+  --_btn-color-back-active: var(--color-primary-800);
+
+  /* action varaible */
+
+  --_btn-bg-action: var(--color-action-400);
+  --_btn-bg-action-hover: var(--color-action-300);
+  --_btn-bg-action-active: var(--color-action-600);
+
+  --_btn-color-action-hover: var(--color-white);
+  --_btn-color-action-active: var(--color-white);
+}
+
+/* Museo Slab font style */
+@font-face {
+  font-family: "Museo Slab 300";
+  src: url("https://static.mbopartners.com/portal/fonts/MuseoSlab-300.woff2")
+      format("woff2"),
+    url("https://static.mbopartners.com/portal/fonts/MuseoSlab-300.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Museo Slab 500";
+  src: url("https://static.mbopartners.com/portal/fonts/MuseoSlab-500.woff2")
+      format("woff2"),
+    url("https://static.mbopartners.com/portal/fonts/MuseoSlab-500.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* Museo Slab font style end */
+
+/* Heading style for dispaly */
+.display {
+  :is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--_ff-display500);
+  }
+  :is(.h1 .fl-heading-text) {
+    font-size: 56px;
+  }
+}
+/* Heading style for dispaly end */
+/* Heading & body text color variant style */
+.primary {
+  :is(h1, h2, h3, h4, h5, h6, p) {
+    color: var(--_heading-primary);
+  }
+}
+.secondary {
+  :is(h1, h2, h3, h4, h5, h6, p) {
+    color: var(--_heading-secondary);
+  }
+}
+.action {
+  :is(h1, h2, h3, h4, h5, h6, p) {
+    color: var(--_heading-action);
+  }
+}
+.white {
+  :is(h1, h2, h3, h4, h5, h6, p) {
+    color: var(--_heading-white);
+  }
+}
+.success {
+  :is(h1, h2, h3, h4, h5, h6, p) {
+    color: var(--_heading-success);
+  }
+}
+.error {
+  :is(h1, h2, h3, h4, h5, h6, p) {
+    color: var(--_heading-error);
+  }
+}
+/* heading color variant style end */
+
+/* Link style here */
+/* ::TODO need to discuss how we can handle the links  */
+.fl-module-content .fl-rich-text a {
+  color: var(--_link-color);
+  text-decoration: var(--_link-text-decoration, none) !important;
+  text-underline-offset: 4px;
+}
+/* white link text area  */
+.white .fl-module-content .fl-rich-text a {
+  --_link-color: var(--_link-color-white);
+}
+.white .fl-module-content .fl-rich-text a:hover {
+  --_link-color: var(--_link-color-white);
+}
+
+/* ::TODO need to discuss how we can handle the links  */
+.fl-module-content .fl-rich-text a:hover {
+  --_link-text-decoration: underline;
+  --_link-color: var(--_link-color-hover);
+}
+.fl-module-content .fl-rich-text a.white {
+  --_link-color: var(--_link-color-white);
+}
+.fl-module-content .fl-rich-text a.white:hover {
+  --_link-color: var(--_link-color-white);
+}
+/* Link style end here */
+
+/* Button style here */
+/* btn genral style */
+.fl-page a.fl-button {
+  border-radius: var(--_btn-radius);
+  padding: var(--_btn-padding, 16px 24px);
+  font-size: var(--_btn-fs, 18px) !important;
+  border-radius: var(--_btn-radius, 4px);
+  color: var(--_btn-color, var(--color-white));
+}
+/* btn genral style end */
+/* btn size style */
+.fl-page .lg a.fl-button {
+  --_btn-padding: var(--_btn-padding-lg);
+  --_btn-fs: 16px;
+}
+.fl-page .md a.fl-button {
+  --_btn-padding: var(--_btn-padding-md);
+  --_btn-fs: 12px;
+}
+.fl-page .sm a.fl-button {
+  --_btn-padding: var(--_btn-padding-sm);
+  --_btn-fs: 12px;
+}
+/* btn common style  */
+.fl-page :where(.btn__action, .btn__primary) a.fl-button * {
+  /* --_btn-color: var(--_btn-color-white) !important; */
+  color: var(--_btn-color-white) !important;
+  font-size: inherit;
+}
+.fl-page :where(.btn__default, .btn__back) a.fl-button * {
+  color: var(--_btn-color-default) !important;
+}
+/* btn common style end  */
+/* button default variant */
+.fl-page .btn__default a.fl-button {
+  background-color: var(--_btn-bg-default) !important;
+  color: var(--_btn-color-default) !important;
+}
+
+.fl-page .btn__default a.fl-button:hover {
+  --_btn-bg-default: var(--_btn-bg-default-hover);
+  --_btn-color: var(--_btn-color-default-hover);
+}
+.fl-page .btn__default a.fl-button:is(:active, :focus) {
+  --_btn-bg-default: var(--_btn-bg-default-active);
+  --_btn-color: var(--_btn-color-default-active);
+}
+/* button default variant end */
+
+/* button back variant */
+.fl-page .btn__back a.fl-button {
+  background-color: var(--_btn-bg-back) !important;
+  color: var(--_btn-color-back) !important;
+}
+
+.fl-page .btn__back a.fl-button:hover {
+  --_btn-color: var(--_btn-color-back-hover);
+}
+.fl-page .btn__back a.fl-button:is(:active, :focus) {
+  --_btn-color: var(--_btn-color-back-active);
+}
+/* button back variant end */
+
+/* primary variant */
+.fl-page .btn__primary a.fl-button {
+  background-color: var(--_btn-bg-primary) !important;
+  color: var(--_btn-color-white) !important;
+}
+
+.fl-page .btn__primary a.fl-button:hover {
+  --_btn-bg-primary: var(--_btn-bg-primary-hover);
+  --_btn-color: var(--_btn-color-primary-hover);
+}
+.fl-page .btn__primary a.fl-button:is(:active, :focus) {
+  --_btn-bg-primary: var(--_btn-bg-primary-active);
+  --_btn-color: var(--_btn-color-primary-active);
+}
+/* primary variant end */
+
+/* action variant */
+.fl-page .btn__action a.fl-button {
+  background-color: var(--_btn-bg-action) !important;
+  color: var(--_btn-color-white) !important;
+}
+
+.fl-page .btn__action a.fl-button:hover {
+  --_btn-bg-action: var(--_btn-bg-action-hover);
+  --_btn-color: var(--_btn-color-action-hover);
+}
+.fl-page .btn__action a.fl-button:is(:active, :focus) {
+  --_btn-bg-action: var(--_btn-bg-action-active);
+  --_btn-color: var(--_btn-color-action-active);
+}
+/* action variant end */
+
+/* Button style end here */
+/* MBO Partners Website Refresh March-2024 style here end */
