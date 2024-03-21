@@ -75,6 +75,7 @@
   --_heading-action: var(--color-action-600);
   --_heading-white: var(--color-white);
   --_heading-success: var(--color-success-900);
+  --_heading-attention: var(--color-attention-900);
   --_heading-error: var(--color-error-900);
 
   /* Link variables */
@@ -171,6 +172,11 @@
 .success {
   :is(h1, h2, h3, h4, h5, h6, p) {
     color: var(--_heading-success);
+  }
+}
+.attention {
+  :is(h1, h2, h3, h4, h5, h6, p) {
+    color: var(--_heading-attention);
   }
 }
 .error {
