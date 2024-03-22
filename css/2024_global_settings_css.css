@@ -70,13 +70,15 @@
   --_ff-body: var(--ff-roboto);
 
   /* heading variant variable */
-  --_heading-primary: var(--color-primary-600);
-  --_heading-secondary: var(--color-secondary-600);
-  --_heading-action: var(--color-action-600);
-  --_heading-white: var(--color-white);
-  --_heading-success: var(--color-success-900);
-  --_heading-attention: var(--color-attention-900);
-  --_heading-error: var(--color-error-900);
+  --_text-primary: var(--color-primary-600);
+  --_text-secondary: var(--color-secondary-600);
+  --_text-action: var(--color-action-600);
+  --_text-white: var(--color-white);
+  --_text-success: var(--color-success-900);
+  --_text-attention: var(--color-attention-900);
+  --_text-error: var(--color-error-900);
+  --_text-light:var(--color-neutrals-400);
+  --_text-dark:var(--color-neutrals-900);
 
   /* Link variables */
 
@@ -87,12 +89,12 @@
   /* Button variables */
   --_btn-radius: var(4px);
   --_btn-color-white: var(--color-white);
-
+  --_btn-bg-transparent: transparent;
   --_btn-padding-lg: 8px 16px;
   --_btn-padding-md: 8px 12px;
   --_btn-padding-sm: 4px 12px;
   /* default variable */
-  --_btn-bg-default: transparent;
+  --_btn-bg-default: var(--_btn-bg-transparent);
   --_btn-bg-default-hover: var(--color-primary-200);
   --_btn-bg-default-active: transparent;
   --_btn-color-default: var(--color-primary-600);
@@ -100,11 +102,23 @@
   --_btn-color-default-active: var(--color-primary-800);
 
   /* back btn variables */
-  --_btn-bg-back: transparent;
+  
   --_btn-color-back: var(--color-primary-600);
   --_btn-color-back-hover: var(--color-primary-400);
   --_btn-color-back-active: var(--color-primary-800);
 
+  /* back_inverted btn variables */
+  
+  --_btn-color-back-inverted: var(--color-white);
+  --_btn-color-back-inverted-hover: var(--color-white);
+  --_btn-color-back-inverted-active: var(--color-white);
+
+
+  /* btn__inverted */
+  
+  --_btn-bg-inverted:var(--_btn-bg-default);
+  --_btn-color-inverted:var(--color-white);
+  --_btn-inverted-outline-hover:var(--color-white);
   /* action varaible */
 
   --_btn-bg-action: var(--color-action-400);
@@ -151,37 +165,47 @@
 /* Heading & body text color variant style */
 .primary {
   :is(h1, h2, h3, h4, h5, h6, p) {
-    color: var(--_heading-primary);
+    color: var(--_text-primary);
   }
 }
 .secondary {
   :is(h1, h2, h3, h4, h5, h6, p) {
-    color: var(--_heading-secondary);
+    color: var(--_text-secondary);
   }
 }
 .action {
   :is(h1, h2, h3, h4, h5, h6, p) {
-    color: var(--_heading-action);
+    color: var(--_text-action);
   }
 }
 .white {
   :is(h1, h2, h3, h4, h5, h6, p) {
-    color: var(--_heading-white);
+    color: var(--_text-white);
+  }
+}
+.light {
+  :is(h1, h2, h3, h4, h5, h6, p) {
+    color: var(--_text-light);
+  }
+}
+.dark {
+  :is(h1, h2, h3, h4, h5, h6, p) {
+    color: var(--_text-dark);
   }
 }
 .success {
   :is(h1, h2, h3, h4, h5, h6, p) {
-    color: var(--_heading-success);
+    color: var(--_text-success);
   }
 }
 .attention {
   :is(h1, h2, h3, h4, h5, h6, p) {
-    color: var(--_heading-attention);
+    color: var(--_text-attention);
   }
 }
 .error {
   :is(h1, h2, h3, h4, h5, h6, p) {
-    color: var(--_heading-error);
+    color: var(--_text-error);
   }
 }
 /* heading color variant style end */
@@ -238,7 +262,7 @@
   --_btn-fs: 12px;
 }
 /* btn common style  */
-.fl-page :where(.btn__action, .btn__primary) a.fl-button * {
+.fl-page :where(.btn__action, .btn__primary, .btn__inverted .btn__back_inverted) a.fl-button * {
   /* --_btn-color: var(--_btn-color-white) !important; */
   color: var(--_btn-color-white) !important;
   font-size: inherit;
@@ -255,28 +279,59 @@
 
 .fl-page .btn__default a.fl-button:hover {
   --_btn-bg-default: var(--_btn-bg-default-hover);
-  --_btn-color: var(--_btn-color-default-hover);
+  --_btn-color-default: var(--_btn-color-default-hover);
 }
 .fl-page .btn__default a.fl-button:is(:active, :focus) {
   --_btn-bg-default: var(--_btn-bg-default-active);
-  --_btn-color: var(--_btn-color-default-active);
+  --_btn-color-default: var(--_btn-color-default-active);
 }
 /* button default variant end */
 
+
 /* button back variant */
 .fl-page .btn__back a.fl-button {
-  background-color: var(--_btn-bg-back) !important;
+  background-color: var(--_btn-bg-transparent) !important;
   color: var(--_btn-color-back) !important;
 }
 
 .fl-page .btn__back a.fl-button:hover {
-  --_btn-color: var(--_btn-color-back-hover);
+  --_btn-color-back: var(--_btn-color-back-hover);
 }
 .fl-page .btn__back a.fl-button:is(:active, :focus) {
-  --_btn-color: var(--_btn-color-back-active);
+  --_btn-color-back: var(--_btn-color-back-active);
 }
 /* button back variant end */
+/* btn__back_inverted */
+.fl-page .btn__back_inverted a.fl-button {
+  background-color: var(--_btn-bg-default) !important;
+  color: var(--_btn-color-back-inverted) !important;
+}
 
+.fl-page .btn__back_inverted a.fl-button:hover{
+  --_btn-bg-default:var(--_btn-bg-default);
+  --_btn-color-back-inverted: var(--_btn-color-back-inverted-hover) !important;
+}
+.fl-page .btn__back_inverted a.fl-button:is(:active, :focus) {
+  --_btn-color-back-inverted: var(--_btn-color-back-inverted-active);
+}
+/* btn__back_inverted end */
+
+/* btn__inverted */
+.fl-page .btn__inverted a.fl-button {
+  background-color: var(--_btn-bg-default) !important;
+  color: var(--_btn-color-inverted) !important;
+  outline: 1px solid var(--_btn-outline-color, transparent);
+}
+
+.fl-page .btn__inverted a.fl-button:hover {
+  --_btn-bg-default:var(--_btn-bg-default);
+  --_btn-color: var(--_btn-color-inverted-hover);
+  --_btn-outline-color:var(--_btn-inverted-outline-hover); 
+}
+.fl-page .btn__inverted a.fl-button:is(:active, :focus) {
+  --_btn-color: var(--_btn-color-inverted-active);
+}
+/* btn__inverted end */
 /* primary variant */
 .fl-page .btn__primary a.fl-button {
   background-color: var(--_btn-bg-primary) !important;
@@ -310,4 +365,84 @@
 /* action variant end */
 
 /* Button style end here */
+
+/* uabb-table style  */
+.mbo_table {
+  --_mbo-table-header-color:var(--color-white);
+  --_mbo-table-header-bg:var(--color-secondary-400);
+}
+.mbo_table .uabb-table-header {
+  --_mbo-table-border-color:var(--color-neutrals-white-300);
+  background: var(--_mbo-table-header-bg);
+  color: var(--_mbo-table-header-color);
+}
+.mbo_table .uabb-table-header th {
+  position: relative;
+}
+.mbo_table .uabb-table-header th:not(:last-child) :before {
+  content: "";
+  top: 12px;
+  bottom: 12px;
+  right: 0;
+  position: absolute;
+  background: var(--_mbo-table-border-color);
+  width: 1px;
+}
+.mbo_table .uabb-table-features td {
+  position: relative;
+  border: none;
+}
+.mbo_table .uabb-table-features td:not(:last-child) :before {
+  --_mbo-table-border-color: var(--color-primary-tint-200);
+  content: "";
+  top: 12px;
+  bottom: 12px;
+  right: 0;
+  position: absolute;
+  background: var(--_mbo-table-border-color);
+  width: 1px;
+}
+.mbo_table .uabb-table-features td::after {
+  --_mbo-table-border-color:#07677D40;
+  content: "";
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  background: var(--_mbo-table-border-color);
+  height: 1px;
+}
+/* uabb-table style end here */
+/* global utilities  */
+/* cluster style here */
+.cluster {
+  display: flex;
+  flex-wrap: var(--cluster-wrap, wrap);
+  gap: var(--gutter, clamp(1.375rem, 1.2rem + 0.89vw, 1rem));
+  justify-content: var(--cluster-horizontal-alignment, flex-start);
+  align-items: var(--cluster-vertical-alignment, center);
+  /* ↓ multiply by -1 to negate the halved value */
+}
+/* <div class="cluster">
+  <div>Item 1 cluster</div>
+  <div>Item 2 cluster</div>
+  <div>Item 3 cluster</div>
+  </div> 
+*/
+  
+.repel {
+  display: flex;
+  flex-wrap: var(--repel-wrap, wrap);
+  justify-content: space-between;
+  align-items: var(--repel-vertical-alignment, center);
+  gap: var(--gutter, clamp(1.375rem, 1.2rem + 0.89vw, 1rem));
+}
+/*
+<div class="repel">
+  <div>Item 1 repels item 2</div>
+  <div>Item 2 repels item 1</div>
+  <div>Item 3 repels item 1</div>
+</div>
+*/
+/* global utilities end here */
 /* MBO Partners Website Refresh March-2024 style here end */
