@@ -369,6 +369,7 @@
 /* uabb-table style  */
 .mbo_table {
   --_mbo-table-header-color:var(--color-white);
+  --_uabb-table-features-bg:var(--color-white);
   --_mbo-table-header-bg:var(--color-secondary-400);
 }
 .mbo_table .uabb-table-header {
@@ -378,6 +379,7 @@
 }
 .mbo_table .uabb-table-header th {
   position: relative;
+  font-weight: normal;
 }
 .mbo_table .uabb-table-header th:not(:last-child) :before {
   content: "";
@@ -387,6 +389,9 @@
   position: absolute;
   background: var(--_mbo-table-border-color);
   width: 1px;
+}
+.mbo_table .uabb-table-features {
+  background: var(--_uabb-table-features-bg);
 }
 .mbo_table .uabb-table-features td {
   position: relative;
