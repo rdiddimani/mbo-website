@@ -32,7 +32,7 @@
   --color-action-600: #1046b8;
   --color-action-700: #0b3ba4;
 
-  --color-border-default: #d4d4d4;
+  --color-border-default: #a199c226;
   --color-success-100: #bae3cd;
   --color-success-200: #1ed773;
   --color-success-400: #38c08f; /* added manually  */
@@ -77,8 +77,8 @@
   --_text-success: var(--color-success-900);
   --_text-attention: var(--color-attention-900);
   --_text-error: var(--color-error-900);
-  --_text-light:var(--color-neutrals-400);
-  --_text-dark:var(--color-neutrals-900);
+  --_text-light: var(--color-neutrals-400);
+  --_text-dark: var(--color-neutrals-900);
 
   /* Link variables */
 
@@ -102,23 +102,22 @@
   --_btn-color-default-active: var(--color-primary-800);
 
   /* back btn variables */
-  
+
   --_btn-color-back: var(--color-primary-600);
   --_btn-color-back-hover: var(--color-primary-400);
   --_btn-color-back-active: var(--color-primary-800);
 
   /* back_inverted btn variables */
-  
+
   --_btn-color-back-inverted: var(--color-white);
   --_btn-color-back-inverted-hover: var(--color-white);
   --_btn-color-back-inverted-active: var(--color-white);
 
-
   /* btn__inverted */
-  
-  --_btn-bg-inverted:var(--_btn-bg-default);
-  --_btn-color-inverted:var(--color-white);
-  --_btn-inverted-outline-hover:var(--color-white);
+
+  --_btn-bg-inverted: var(--_btn-bg-default);
+  --_btn-color-inverted: var(--color-white);
+  --_btn-inverted-outline-hover: var(--color-white);
   /* action varaible */
 
   --_btn-bg-action: var(--color-action-400);
@@ -262,7 +261,10 @@
   --_btn-fs: 12px;
 }
 /* btn common style  */
-.fl-page :where(.btn__action, .btn__primary, .btn__inverted .btn__back_inverted) a.fl-button * {
+.fl-page
+  :where(.btn__action, .btn__primary, .btn__inverted .btn__back_inverted)
+  a.fl-button
+  * {
   /* --_btn-color: var(--_btn-color-white) !important; */
   color: var(--_btn-color-white) !important;
   font-size: inherit;
@@ -287,7 +289,6 @@
 }
 /* button default variant end */
 
-
 /* button back variant */
 .fl-page .btn__back a.fl-button {
   background-color: var(--_btn-bg-transparent) !important;
@@ -307,8 +308,8 @@
   color: var(--_btn-color-back-inverted) !important;
 }
 
-.fl-page .btn__back_inverted a.fl-button:hover{
-  --_btn-bg-default:var(--_btn-bg-default);
+.fl-page .btn__back_inverted a.fl-button:hover {
+  --_btn-bg-default: var(--_btn-bg-default);
   --_btn-color-back-inverted: var(--_btn-color-back-inverted-hover) !important;
 }
 .fl-page .btn__back_inverted a.fl-button:is(:active, :focus) {
@@ -324,9 +325,9 @@
 }
 
 .fl-page .btn__inverted a.fl-button:hover {
-  --_btn-bg-default:var(--_btn-bg-default);
+  --_btn-bg-default: var(--_btn-bg-default);
   --_btn-color: var(--_btn-color-inverted-hover);
-  --_btn-outline-color:var(--_btn-inverted-outline-hover); 
+  --_btn-outline-color: var(--_btn-inverted-outline-hover);
 }
 .fl-page .btn__inverted a.fl-button:is(:active, :focus) {
   --_btn-color: var(--_btn-color-inverted-active);
@@ -368,17 +369,21 @@
 
 /* uabb-table style  */
 .mbo_table {
-  --_mbo-table-header-color:var(--color-white);
-  --_uabb-table-features-bg:var(--color-white);
-  --_mbo-table-header-bg:var(--color-secondary-400);
+  --_mbo-table-header-color: var(--color-white);
+  --_uabb-table-features-bg: var(--color-white);
+  --_mbo-table-header-bg: var(--color-secondary-400);
 }
 .mbo_table .uabb-table-header {
-  --_mbo-table-border-color:var(--color-neutrals-white-300);
+  --_mbo-table-border-color: var(--color-neutrals-white-300);
   background: var(--_mbo-table-header-bg);
   color: var(--_mbo-table-header-color);
 }
 .mbo_table .uabb-table-header th {
   position: relative;
+  font-weight: normal;
+  border: none !important;
+}
+.mbo_table .uabb-table-header label.head-inner-text {
   font-weight: normal;
 }
 .mbo_table .uabb-table-header th:not(:last-child) :before {
@@ -395,10 +400,10 @@
 }
 .mbo_table .uabb-table-features td {
   position: relative;
-  border: none;
+  border: none !important;
 }
 .mbo_table .uabb-table-features td:not(:last-child) :before {
-  --_mbo-table-border-color: var(--color-primary-tint-200);
+  --_mbo-table-border-color: var(--color-border-default);
   content: "";
   top: 12px;
   bottom: 12px;
@@ -408,7 +413,7 @@
   width: 1px;
 }
 .mbo_table .uabb-table-features td::after {
-  --_mbo-table-border-color:#07677D40;
+  --_mbo-table-border-color: #07677d40;
   content: "";
   bottom: 0;
   right: 0;
@@ -418,12 +423,118 @@
   height: 1px;
 }
 /* uabb-table style end here */
+
+/* accordion style here */
+.faq_accordion {
+  --_accordion-label-color: var(--color-primary-600);
+  --_accordion-arrow-up:url("/wp-content/uploads/2024/03/acordion_up_arrow.png");
+  --_accordion-arrow-down:url("/wp-content/uploads/2024/03/accordion_down_arrow.png");
+}
+.faq_accordion .pp-accordion-button-label span {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: center;
+  color: var(--_accordion-label-color);
+  margin-right: 25px;
+}
+.faq_accordion .dashicons-arrow-up-alt2::before {
+  content: var(--_accordion-arrow-up) !important;
+}
+.faq_accordion .dashicons-arrow-down-alt2:before {
+  content: var(--_accordion-arrow-down) !important;
+}
+.faq_accordion
+  .pp-accordion-item
+  .pp-accordion-button-icon.pp-accordion-icon-right {
+  margin-top: -45px !important;
+}
+.faq_accordion .pp-accordion-item {
+  border-box: 0 !important;
+}
+.faq_accordion .pp-accordion-item .pp-accordion-content:before {
+  position: relative;
+  margin-left: -9px;
+  margin-top: -54px;
+  margin-bottom: 30px;
+  width: 0;
+  height: 0;
+  border-bottom: 16px solid var(--color-white);
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+}
+.faq_accordion .pp-accordion-item .pp-accordion-content {
+  padding-top: 38px;
+}
+.faq_accordion .pp-accordion-button-label {
+  border-bottom: 0.5px solid var(--color-primary-300);
+  padding-bottom: 30px;
+}
+.faq_accordion .pp-accordion-button-label:nth-last-child {
+  border-bottom: 0px !important;
+}
+
+@media (width <= 768px) {
+  .faq_accordion .pp-accordion-button-label {
+    flex-wrap: inherit;
+  }
+  .faq_accordion .pp-accordion-button-label span {
+    margin-right: 10px;
+  }
+}
+/* accordion global styles ends here */
+
+/* FAQ table designs */
+.mbo_table_global {
+  --_mbo-table-global-header-bg: var(--color-secondary-400);
+  --_mbo-table-global-header-color: var(--color-white);
+  --_mbo_table_global-body-bg: var(--color-white);
+}
+.mbo_table_global th {
+  background: var(--_mbo-table-global-header-bg);
+  color: var(--_mbo-table-global-header-color);
+  padding: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+
+.mbo_table_global td:not(:last-child),
+.mbo_table_global th:not(:last-child) {
+  position: relative;
+}
+
+.mbo_table_global td:not(:last-child)::after,
+.mbo_table_global th:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 0;
+  border-right: 1px solid var(--color-border-default);
+  bottom: 12px;
+}
+
+.mbo_table_global td ul {
+  margin-left: -30px !important;
+}
+.mbo_table_global td {
+  width: auto;
+  padding: 30px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: left;
+  background: var(--_mbo_table_global-body-bg);
+  box-shadow: 0px -2px 0px 0px #07677d40 inset;
+  vertical-align: top;
+}
+
 /* global utilities  */
 /* cluster style here */
 .cluster {
   display: flex;
   flex-wrap: var(--cluster-wrap, wrap);
-  gap: var(--gutter, clamp(1.375rem, 1.2rem + 0.89vw, 1rem));
+  gap: var(--gutter, 1rem);
   justify-content: var(--cluster-horizontal-alignment, flex-start);
   align-items: var(--cluster-vertical-alignment, center);
   /* ↓ multiply by -1 to negate the halved value */
@@ -434,13 +545,13 @@
   <div>Item 3 cluster</div>
   </div> 
 */
-  
+
 .repel {
   display: flex;
   flex-wrap: var(--repel-wrap, wrap);
   justify-content: space-between;
   align-items: var(--repel-vertical-alignment, center);
-  gap: var(--gutter, clamp(1.375rem, 1.2rem + 0.89vw, 1rem));
+  gap: var(--gutter, 1rem);
 }
 /*
 <div class="repel">
