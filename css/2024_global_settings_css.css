@@ -226,7 +226,7 @@
 
 /* ::TODO need to discuss how we can handle the links  */
 .fl-module-content .fl-rich-text a:hover {
-  --_link-text-decoration: underline;
+  --_link-text-decoration: none;
   --_link-color: var(--_link-color-hover);
 }
 .fl-module-content .fl-rich-text a.white {
