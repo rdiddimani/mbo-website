@@ -58,7 +58,6 @@
   --color-white: #ffffff;
   --color-transparent: transparent;
 
-  /* Custom added  */
   --ff-roboto: "Roboto", sans-serif;
   --ff-museo300: "Museo Slab 300", sans-serif;
   --ff-museo500: "Museo Slab 500", sans-serif;
@@ -261,8 +260,7 @@
   --_btn-fs: 12px;
 }
 /* btn common style  */
-.fl-page
-  :where(.btn__action, .btn__primary, .btn__inverted .btn__back_inverted)
+.fl-page :where(.btn__action, .btn__primary, .btn__inverted .btn__back_inverted)
   a.fl-button
   * {
   /* --_btn-color: var(--_btn-color-white) !important; */
