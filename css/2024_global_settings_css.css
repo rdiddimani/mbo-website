@@ -575,7 +575,7 @@
   --_social-icon-size: 1.75rem;
   --_social-link-gap: 0.25rem;
   --_social-link-color: var(--color-neutrals-400);
-  /*--_social-link-border-color: rgb(32, 32, 32);*/
+  
   --_social-icon-gap:1.5rem;
   --_social-link-fill-hover:var(--color-primary-400);
   display: grid;
@@ -603,7 +603,7 @@
   --_social-link-padding: 0.125rem;
   --_social-link-color: var(--color-neutrals-400);
   --_social-link-color-hover: var(--color-primary-400);
-  /*--_social-link-border-color: #fff;*/
+  
 }
 @media (width > 48rem) {
   .mbo_social.footer {
