@@ -1,0 +1,9 @@
+$columns: 12;
+
+@for $i from 1 through $columns {
+  .column-#{$i} {
+    column-count: #{$i};
+    column-gap: var(--column-gap, 1rem);
+    width: var(--column-width, fit-content);
+  }
+}

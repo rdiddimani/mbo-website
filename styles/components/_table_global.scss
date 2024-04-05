@@ -1,0 +1,111 @@
+/* FAQ table designs style */
+.mbo_table_global {
+  --_mbo-table-global-header-bg: var(--color-secondary-400);
+  --_mbo-table-global-header-color: var(--color-white);
+  --_mbo_table_global-body-bg: var(--color-white);
+
+  th {
+    background: var(--_mbo-table-global-header-bg);
+    color: var(--_mbo-table-global-header-color);
+    padding: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  td:not(:last-child),
+  th:not(:last-child) {
+    position: relative;
+  }
+
+  td:not(:last-child)::after,
+  th:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 0;
+    border-right: 1px solid var(--color-border-default);
+    bottom: 12px;
+  }
+  td {
+    width: auto;
+    padding: 30px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: left;
+    background: var(--_mbo_table_global-body-bg);
+    box-shadow: 0px -2px 0px 0px #07677d40 inset;
+    vertical-align: top;
+    ul {
+      margin-left: -30px !important;
+    }
+  }
+}
+// mbo_table_global end here
+
+/* FAQ table designs style end */
+
+/* uabb-table style  */
+.mbo_table {
+  --_mbo-table-header-color: var(--color-white);
+  --_uabb-table-features-bg: var(--color-white);
+  --_mbo-table-header-bg: var(--color-secondary-400);
+  .uabb-table-header {
+    --_mbo-table-border-color: var(--color-neutrals-white-300);
+    background: var(--_mbo-table-header-bg);
+    color: var(--_mbo-table-header-color);
+    label.head-inner-text {
+      font-weight: normal;
+    }
+
+    th {
+      position: relative;
+      font-weight: normal;
+      border: none !important;
+      &:not(:last-child) :before {
+        content: "";
+        top: 12px;
+        bottom: 12px;
+        right: 0;
+        position: absolute;
+        background: var(--_mbo-table-border-color);
+        width: 1px;
+      }
+    }
+    //   uabb-table-header th end
+  }
+  //   uabb-table-header end here
+
+  .uabb-table-features {
+    background: var(--_uabb-table-features-bg);
+    td {
+      position: relative;
+      border: none !important;
+
+      &:not(:last-child) :before {
+        --_mbo-table-border-color: var(--color-border-default);
+        content: "";
+        top: 12px;
+        bottom: 12px;
+        right: 0;
+        position: absolute;
+        background: var(--_mbo-table-border-color);
+        width: 1px;
+      }
+      &:after {
+        --_mbo-table-border-color: #07677d40;
+        content: "";
+        bottom: 0;
+        right: 0;
+        left: 0;
+        position: absolute;
+        background: var(--_mbo-table-border-color);
+        height: 1px;
+      }
+    }
+  }
+  // uabb-table-features end
+}
+// mbo_table end here
+/* uabb-table style end here */

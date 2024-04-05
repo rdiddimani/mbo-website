@@ -1,0 +1,205 @@
+:root {
+  --color-primary-100: #f5f3f7;
+  --color-primary-200: #eae9f2;
+  --color-primary-300: #a199c2;
+  --color-primary-400: #6855b4;
+  --color-primary-500: #483981;
+  --color-primary-600: #352281;
+  --color-primary-700: #211551;
+  --color-primary-800: #22135e;
+  --color-primary-900: #150b3b;
+
+  --color-primary-tint-100: rgba(161, 153, 194, 0.1019607843);
+  --color-primary-tint-200: rgba(161, 153, 194, 0.1490196078);
+  --color-primary-tint-500: rgba(161, 153, 194, 0.5019607843);
+  --color-primary-tint-600: #5e38ba;
+  --color-secondary-100: #d5f7ff;
+  --color-secondary-200: #00b7e0;
+  --color-secondary-300: #0095b8;
+  --color-secondary-400: #007f9c;
+  --color-secondary-500: #07677d;
+  --color-secondary-600: #00576b;
+  --color-secondary-700: #044655;
+  --color-secondary-tint-200: rgba(213, 247, 255, 0.2);
+  --color-secondary-tint-500: rgba(213, 247, 255, 0.5019607843);
+
+  --color-action-100: #d6e3ff;
+  --color-action-200: #6697ff;
+  --color-action-300: #3270eb;
+  --color-action-400: #1559ea;
+  --color-action-500: #1350d3;
+  --color-action-600: #1046b8;
+  --color-action-700: #0b3ba4;
+
+  --color-border-default: #d4d4d4;
+  --color-success-100: #bae3cd;
+  --color-success-200: #1ed773;
+  --color-success-400: #38c08f; /* added manually  */
+  --color-success-500: #008c40;
+  --color-success-900: #026931;
+  --color-attention-100: #f4d3bf;
+  --color-attention-500: #f37026;
+  --color-attention-900: #d9550a;
+  --color-error-100: #fbeded;
+  --color-error-500: #ca313e;
+  --color-error-900: #b41320;
+  --color-neutrals-100: #f3f3f4;
+  --color-neutrals-200: #b8b3bc;
+  --color-neutrals-300: rgba(6, 24, 62, 0.5019607843);
+  --color-neutrals-400: #575463;
+  --color-neutrals-500: rgba(16, 10, 39, 0.7490196078);
+  --color-neutrals-900: #100a27;
+  --color-neutrals-white-150: rgba(255, 255, 255, 0.1490196078);
+  --color-neutrals-white-300: rgba(255, 255, 255, 0.3019607843);
+  --color-neutrals-white-600: rgba(255, 255, 255, 0.6);
+  --color-neutrals-white-850: rgba(255, 255, 255, 0.8509803922);
+  --color-neutrals-white-900: #ffffff;
+  --color-white: #ffffff;
+  --color-transparent: transparent;
+  --color-border: var(--color-border-default);
+
+  --fs-10: 0.625rem;
+  --fs-12: 0.75rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-24: 1.5rem;
+  --fs-28: 1.75rem;
+  --fs-32: 2rem;
+  --fs-36: 2.25rem;
+  --fs-40: 2.5rem;
+  --fs-48: 3rem;
+  --fs-56: 3.5rem;
+  --fs-64: 4rem;
+  --fs-80: 5rem;
+  --width-full: 100%;
+  --ff-roboto: "Roboto", sans-serif;
+  --ff-museo300: "Museo Slab 300", sans-serif;
+  --ff-museo500: "Museo Slab 500", sans-serif;
+
+  --fw-100: 100;
+  --fw-200: 200;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-900: 900;
+
+  --index-10: 10;
+  --index-20: 20;
+  --index-30: 30;
+  --index-40: 40;
+  --index-50: 50;
+  --index-60: 60;
+  --index-70: 70;
+  --index-80: 80;
+  --index-90: 90;
+  --index-100: 100;
+
+  --radius-none: 0px;
+  --radius-rounded: 0.25rem;
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 100000px;
+
+  --opacity-30: 0.3;
+  --opacity-40: 0.4;
+  --opacity-50: 0.5;
+  --opacity-60: 0.6;
+  --opacity-70: 0.7;
+  --opacity-80: 0.8;
+  --opacity-90: 0.9;
+
+  --size-0: 0rem;
+  --size-0-5: 0.125rem;
+  --size-1: 0.25rem;
+  --size-1-5: 0.375rem;
+  --size-2: 0.5rem;
+  --size-2-5: 0.625rem;
+  --size-3: 0.75rem;
+  --size-3-5: 0.875rem;
+  --size-4: 1rem;
+  --size-4-5: 1.125rem;
+  --size-5: 1.25rem;
+  --size-6: 1.5rem;
+  --size-7: 1.75rem;
+  --size-8: 2rem;
+  --size-9: 2.25rem;
+  --size-10: 2.5rem;
+  --size-11: 2.75rem;
+  --size-12: 3rem;
+  --size-14: 3.5rem;
+  --size-16: 4rem;
+  --size-20: 5rem;
+  --size-24: 6rem;
+  --size-full: 100%;
+
+  --fs-8: var(--size-2);
+  --fs-10: var(--size-2-5);
+  --fs-12: var(--size-3);
+  --fs-14: var(--size-3-5);
+  --fs-16: var(--size-4);
+  --fs-base: var(--size-4);
+  --fs-18: var(--size-4-5);
+  --fs-20: var(--size-5);
+  --fs-24: var(--size-6);
+  --fs-28: var(--size-7);
+  --fs-32: var(--size-8);
+  --fs-36: var(--size-9);
+  --fs-40: var(--size-10);
+  --fs-48: var(--size-12);
+  --fs-56: var(--size-14);
+
+  /* Card Related Variables */
+
+  /* End Card Related Variables */
+
+  /* Checkbox related variables */
+  --ratio-square: 1;
+  --ratio-widescreen: 16/9;
+  --radius-full: 100000px;
+  --shadow-color: 220 3% 15%;
+  --shadow-strength: 1%;
+  --shadow-xs: 0 1px 2px -1px hsl(var(--shadow-color) /
+        calc(var(--shadow-strength) + 9%));
+  --shadow-sm: 0 3px 5px -2px hsl(var(--shadow-color) /
+          calc(var(--shadow-strength) + 3%)),
+    0 7px 14px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%));
+  --shadow-md: 0 -1px 3px 0 hsl(var(--shadow-color) /
+          calc(var(--shadow-strength) + 2%)),
+    0 1px 2px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+    0 2px 5px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+    0 4px 12px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+    0 12px 15px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
+  --shadow-lg: 0 -2px 5px 0 hsl(var(--shadow-color) /
+          calc(var(--shadow-strength) + 2%)),
+    0 1px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 2px 2px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+    0 9px 9px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+    0 16px 16px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 6%));
+  --shadow-xl: 0 -1px 2px 0 hsl(var(--shadow-color) /
+          calc(var(--shadow-strength) + 2%)),
+    0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+    0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+    0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
+  --shadow-xxl: 0 -1px 2px 0 hsl(var(--shadow-color) /
+          calc(var(--shadow-strength) + 2%)),
+    0 3px 2px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 7px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 12px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+    0 22px 18px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+    0 41px 33px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 6%)),
+    0 100px 80px -2px hsl(var(--shadow-color) /
+          calc(var(--shadow-strength) + 7%));
+
+  /* spacing tokens from figma  */
+}

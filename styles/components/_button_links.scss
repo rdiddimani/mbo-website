@@ -1,0 +1,203 @@
+:root {
+  /* Link variables */
+
+  --_link-color: var(--color-primary-600);
+  --_link-color-hover: var(--color-primary-400);
+  --_link-color-white: var(--color-white);
+
+  /* Button variables */
+  --_btn-radius: var(4px);
+  --_btn-color-white: var(--color-white);
+  --_btn-bg-transparent: transparent;
+  --_btn-padding-lg: 8px 16px;
+  --_btn-padding-md: 8px 12px;
+  --_btn-padding-sm: 4px 12px;
+  /* default variable */
+  --_btn-bg-default: var(--_btn-bg-transparent);
+  --_btn-bg-default-hover: var(--color-primary-200);
+  --_btn-bg-default-active: transparent;
+  --_btn-color-default: var(--color-primary-600);
+  --_btn-color-default-hover: var(--color-primary-400);
+  --_btn-color-default-active: var(--color-primary-800);
+
+  /* back btn variables */
+
+  --_btn-color-back: var(--color-primary-600);
+  --_btn-color-back-hover: var(--color-primary-400);
+  --_btn-color-back-active: var(--color-primary-800);
+
+  /* back_inverted btn variables */
+
+  --_btn-color-back-inverted: var(--color-white);
+  --_btn-color-back-inverted-hover: var(--color-white);
+  --_btn-color-back-inverted-active: var(--color-white);
+
+  /* btn__inverted */
+
+  --_btn-bg-inverted: var(--_btn-bg-default);
+  --_btn-color-inverted: var(--color-white);
+  --_btn-inverted-outline-hover: var(--color-white);
+  /* action varaible */
+
+  --_btn-bg-action: var(--color-action-400);
+  --_btn-bg-action-hover: var(--color-action-300);
+  --_btn-bg-action-active: var(--color-action-600);
+
+  --_btn-color-action-hover: var(--color-white);
+  --_btn-color-action-active: var(--color-white);
+}
+/* Link style here */
+
+.fl-module-content .fl-rich-text a {
+  color: var(--_link-color);
+  text-decoration: var(--_link-text-decoration, none) !important;
+  text-underline-offset: 4px;
+  &:hover {
+    --_link-text-decoration: none;
+    --_link-color: var(--_link-color-hover);
+  }
+  &.white {
+    --_link-color: var(--_link-color-white);
+    &:hover {
+      --_link-color: var(--_link-color-white);
+    }
+  }
+}
+/* white link text area  */
+.white .fl-module-content .fl-rich-text a {
+  --_link-color: var(--_link-color-white);
+  &:hover {
+    --_link-color: var(--_link-color-white);
+  }
+}
+/* Link style end here */
+
+/* Button style here */
+/* btn genral style */
+.fl-page {
+  a.fl-button {
+    border-radius: var(--_btn-radius);
+    padding: var(--_btn-padding, 16px 24px);
+    font-size: var(--_btn-fs, 18px) !important;
+    border-radius: var(--_btn-radius, 4px);
+    color: var(--_btn-color, var(--color-white));
+  }
+  // a.fl-button end
+  // btn size variantions
+  .lg a.fl-button {
+    --_btn-padding: var(--_btn-padding-lg);
+    --_btn-fs: 16px;
+  }
+  // .lg a.fl-button end
+  .md a.fl-button {
+    --_btn-padding: var(--_btn-padding-md);
+    --_btn-fs: 12px;
+  }
+  // .md a.fl-button end
+  .sm a.fl-button {
+    --_btn-padding: var(--_btn-padding-sm);
+    --_btn-fs: 12px;
+  }
+  // .sm a.fl-button end
+
+  :where(.btn__action, .btn__primary, .btn__inverted .btn__back_inverted)
+    a.fl-button
+    * {
+    /* --_btn-color: var(--_btn-color-white) !important; */
+    color: var(--_btn-color-white) !important;
+    font-size: inherit;
+  }
+  :where(.btn__default, .btn__back) a.fl-button * {
+    color: var(--_btn-color-default) !important;
+  }
+  // button common style end
+
+  /* button default variant */
+  .btn__default a.fl-button {
+    background-color: var(--_btn-bg-default) !important;
+    color: var(--_btn-color-default) !important;
+    &:hover {
+      --_btn-bg-default: var(--_btn-bg-default-hover);
+      --_btn-color-default: var(--_btn-color-default-hover);
+    }
+    &:is(:active, :focus) {
+      --_btn-bg-default: var(--_btn-bg-default-active);
+      --_btn-color-default: var(--_btn-color-default-active);
+    }
+  }
+  /* button default variant end */
+  /* button back variant */
+  .btn__back a.fl-button {
+    background-color: var(--_btn-bg-transparent) !important;
+    color: var(--_btn-color-back) !important;
+    &:hover {
+      --_btn-color-back: var(--_btn-color-back-hover);
+    }
+    &:is(:active, :focus) {
+      --_btn-color-back: var(--_btn-color-back-active);
+    }
+  }
+  /* button back variant end */
+  /* btn__back_inverted */
+  .btn__back_inverted a.fl-button {
+    background-color: var(--_btn-bg-default) !important;
+    color: var(--_btn-color-back-inverted) !important;
+    &:hover {
+      --_btn-bg-default: var(--_btn-bg-default);
+      --_btn-color-back-inverted: var(
+        --_btn-color-back-inverted-hover
+      ) !important;
+    }
+    &:is(:active, :focus) {
+      --_btn-color-back-inverted: var(--_btn-color-back-inverted-active);
+    }
+  }
+  /* btn__back_inverted end */
+  /* btn__inverted */
+  /* btn__inverted */
+  .btn__inverted a.fl-button {
+    background-color: var(--_btn-bg-default) !important;
+    color: var(--_btn-color-inverted) !important;
+    outline: 1px solid var(--_btn-outline-color, transparent);
+    &:hover {
+      --_btn-bg-default: var(--_btn-bg-default);
+      --_btn-color: var(--_btn-color-inverted-hover);
+      --_btn-outline-color: var(--_btn-inverted-outline-hover);
+    }
+    &:is(:active, :focus) {
+      --_btn-color: var(--_btn-color-inverted-active);
+    }
+  }
+  /* btn__inverted end */
+  /* primary variant */
+  .btn__primary a.fl-button {
+    background-color: var(--_btn-bg-primary) !important;
+    color: var(--_btn-color-white) !important;
+    &:hover {
+      --_btn-bg-primary: var(--_btn-bg-primary-hover);
+      --_btn-color: var(--_btn-color-primary-hover);
+    }
+    &:is(:active, :focus) {
+      --_btn-bg-primary: var(--_btn-bg-primary-active);
+      --_btn-color: var(--_btn-color-primary-active);
+    }
+  }
+  /* primary variant end */
+
+  /* action variant */
+  .btn__action a.fl-button {
+    background-color: var(--_btn-bg-action) !important;
+    color: var(--_btn-color-white) !important;
+    &:hover {
+      --_btn-bg-action: var(--_btn-bg-action-hover);
+      --_btn-color: var(--_btn-color-action-hover);
+    }
+    &:is(:active, :focus) {
+      --_btn-bg-action: var(--_btn-bg-action-active);
+      --_btn-color: var(--_btn-color-action-active);
+    }
+  }
+
+  /* action variant end */
+}
+// .fl-page end

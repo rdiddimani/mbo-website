@@ -1,0 +1,30 @@
+// @use "./styles/reset" as *;
+@use "./styles/tokens/_token" as *;
+@use "./styles/compositions/_compositions-dir" as *;
+@use "./styles/utilities/_utilities-dir" as *;
+@use "./styles/compositions/_compositions-dir" as *;
+
+
+
+@font-face {
+  font-family: "Museo Slab 300";
+  src: url("https://static.mbopartners.com/portal/fonts/MuseoSlab-300.woff2")
+      format("woff2"),
+    url("https://static.mbopartners.com/portal/fonts/MuseoSlab-300.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Slab 500";
+  src: url("https://static.mbopartners.com/portal/fonts/MuseoSlab-500.woff2")
+      format("woff2"),
+    url("https://static.mbopartners.com/portal/fonts/MuseoSlab-500.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/*:TODO  Need to grab the these custom props from design system */

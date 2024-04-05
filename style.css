@@ -1,0 +1,623 @@
+@charset "UTF-8";
+:root {
+  --color-primary-100: #f5f3f7;
+  --color-primary-200: #eae9f2;
+  --color-primary-300: #a199c2;
+  --color-primary-400: #6855b4;
+  --color-primary-500: #483981;
+  --color-primary-600: #352281;
+  --color-primary-700: #211551;
+  --color-primary-800: #22135e;
+  --color-primary-900: #150b3b;
+  --color-primary-tint-100: rgba(161, 153, 194, 0.1019607843);
+  --color-primary-tint-200: rgba(161, 153, 194, 0.1490196078);
+  --color-primary-tint-500: rgba(161, 153, 194, 0.5019607843);
+  --color-primary-tint-600: #5e38ba;
+  --color-secondary-100: #d5f7ff;
+  --color-secondary-200: #00b7e0;
+  --color-secondary-300: #0095b8;
+  --color-secondary-400: #007f9c;
+  --color-secondary-500: #07677d;
+  --color-secondary-600: #00576b;
+  --color-secondary-700: #044655;
+  --color-secondary-tint-200: rgba(213, 247, 255, 0.2);
+  --color-secondary-tint-500: rgba(213, 247, 255, 0.5019607843);
+  --color-action-100: #d6e3ff;
+  --color-action-200: #6697ff;
+  --color-action-300: #3270eb;
+  --color-action-400: #1559ea;
+  --color-action-500: #1350d3;
+  --color-action-600: #1046b8;
+  --color-action-700: #0b3ba4;
+  --color-border-default: #d4d4d4;
+  --color-success-100: #bae3cd;
+  --color-success-200: #1ed773;
+  --color-success-400: #38c08f; /* added manually  */
+  --color-success-500: #008c40;
+  --color-success-900: #026931;
+  --color-attention-100: #f4d3bf;
+  --color-attention-500: #f37026;
+  --color-attention-900: #d9550a;
+  --color-error-100: #fbeded;
+  --color-error-500: #ca313e;
+  --color-error-900: #b41320;
+  --color-neutrals-100: #f3f3f4;
+  --color-neutrals-200: #b8b3bc;
+  --color-neutrals-300: rgba(6, 24, 62, 0.5019607843);
+  --color-neutrals-400: #575463;
+  --color-neutrals-500: rgba(16, 10, 39, 0.7490196078);
+  --color-neutrals-900: #100a27;
+  --color-neutrals-white-150: rgba(255, 255, 255, 0.1490196078);
+  --color-neutrals-white-300: rgba(255, 255, 255, 0.3019607843);
+  --color-neutrals-white-600: rgba(255, 255, 255, 0.6);
+  --color-neutrals-white-850: rgba(255, 255, 255, 0.8509803922);
+  --color-neutrals-white-900: #ffffff;
+  --color-white: #ffffff;
+  --color-transparent: transparent;
+  --color-border: var(--color-border-default);
+  --fs-10: 0.625rem;
+  --fs-12: 0.75rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-24: 1.5rem;
+  --fs-28: 1.75rem;
+  --fs-32: 2rem;
+  --fs-36: 2.25rem;
+  --fs-40: 2.5rem;
+  --fs-48: 3rem;
+  --fs-56: 3.5rem;
+  --fs-64: 4rem;
+  --fs-80: 5rem;
+  --width-full: 100%;
+  --ff-roboto: "Roboto", sans-serif;
+  --ff-museo300: "Museo Slab 300", sans-serif;
+  --ff-museo500: "Museo Slab 500", sans-serif;
+  --fw-100: 100;
+  --fw-200: 200;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-900: 900;
+  --index-10: 10;
+  --index-20: 20;
+  --index-30: 30;
+  --index-40: 40;
+  --index-50: 50;
+  --index-60: 60;
+  --index-70: 70;
+  --index-80: 80;
+  --index-90: 90;
+  --index-100: 100;
+  --radius-none: 0px;
+  --radius-rounded: 0.25rem;
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 100000px;
+  --opacity-30: 0.3;
+  --opacity-40: 0.4;
+  --opacity-50: 0.5;
+  --opacity-60: 0.6;
+  --opacity-70: 0.7;
+  --opacity-80: 0.8;
+  --opacity-90: 0.9;
+  --size-0: 0rem;
+  --size-0-5: 0.125rem;
+  --size-1: 0.25rem;
+  --size-1-5: 0.375rem;
+  --size-2: 0.5rem;
+  --size-2-5: 0.625rem;
+  --size-3: 0.75rem;
+  --size-3-5: 0.875rem;
+  --size-4: 1rem;
+  --size-4-5: 1.125rem;
+  --size-5: 1.25rem;
+  --size-6: 1.5rem;
+  --size-7: 1.75rem;
+  --size-8: 2rem;
+  --size-9: 2.25rem;
+  --size-10: 2.5rem;
+  --size-11: 2.75rem;
+  --size-12: 3rem;
+  --size-14: 3.5rem;
+  --size-16: 4rem;
+  --size-20: 5rem;
+  --size-24: 6rem;
+  --size-full: 100%;
+  --fs-8: var(--size-2);
+  --fs-10: var(--size-2-5);
+  --fs-12: var(--size-3);
+  --fs-14: var(--size-3-5);
+  --fs-16: var(--size-4);
+  --fs-base: var(--size-4);
+  --fs-18: var(--size-4-5);
+  --fs-20: var(--size-5);
+  --fs-24: var(--size-6);
+  --fs-28: var(--size-7);
+  --fs-32: var(--size-8);
+  --fs-36: var(--size-9);
+  --fs-40: var(--size-10);
+  --fs-48: var(--size-12);
+  --fs-56: var(--size-14);
+  /* Card Related Variables */
+  /* End Card Related Variables */
+  /* Checkbox related variables */
+  --ratio-square: 1;
+  --ratio-widescreen: 16/9;
+  --radius-full: 100000px;
+  --shadow-color: 220 3% 15%;
+  --shadow-strength: 1%;
+  --shadow-xs: 0 1px 2px -1px hsl(var(--shadow-color) /
+        calc(var(--shadow-strength) + 9%));
+  --shadow-sm: 0 3px 5px -2px hsl(var(--shadow-color) /
+          calc(var(--shadow-strength) + 3%)),
+    0 7px 14px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%));
+  --shadow-md: 0 -1px 3px 0 hsl(var(--shadow-color) /
+          calc(var(--shadow-strength) + 2%)),
+    0 1px 2px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+    0 2px 5px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+    0 4px 12px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+    0 12px 15px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
+  --shadow-lg: 0 -2px 5px 0 hsl(var(--shadow-color) /
+          calc(var(--shadow-strength) + 2%)),
+    0 1px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 2px 2px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+    0 9px 9px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+    0 16px 16px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 6%));
+  --shadow-xl: 0 -1px 2px 0 hsl(var(--shadow-color) /
+          calc(var(--shadow-strength) + 2%)),
+    0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+    0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+    0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
+  --shadow-xxl: 0 -1px 2px 0 hsl(var(--shadow-color) /
+          calc(var(--shadow-strength) + 2%)),
+    0 3px 2px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 7px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+    0 12px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+    0 22px 18px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+    0 41px 33px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 6%)),
+    0 100px 80px -2px hsl(var(--shadow-color) /
+          calc(var(--shadow-strength) + 7%));
+  /* spacing tokens from figma  */
+}
+
+:root {
+  /* local scopped variables */
+  --_ff-display300: var(--ff-museo300);
+  --_ff-display500: var(--ff-museo500);
+  --_ff-body: var(--ff-roboto);
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: var(--cluster-wrap, wrap);
+  gap: var(--gutter, clamp(1.375rem, 1.2rem + 0.89vw, 1rem));
+  justify-content: var(--cluster-horizontal-alignment, flex-start);
+  align-items: var(--cluster-vertical-alignment, center);
+  /* ↓ multiply by -1 to negate the halved value */
+}
+
+/*
+<div class="cluster">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+  <div>Item 4</div>
+  <div>Item 5</div>
+  <div>Item 6</div>
+  <div>Item 7</div>
+  <div>Item 8</div>
+</div>
+*/
+.column-1 {
+  column-count: 1;
+  column-gap: var(--column-gap, 1rem);
+  width: var(--column-width, fit-content);
+}
+
+.column-2 {
+  column-count: 2;
+  column-gap: var(--column-gap, 1rem);
+  width: var(--column-width, fit-content);
+}
+
+.column-3 {
+  column-count: 3;
+  column-gap: var(--column-gap, 1rem);
+  width: var(--column-width, fit-content);
+}
+
+.column-4 {
+  column-count: 4;
+  column-gap: var(--column-gap, 1rem);
+  width: var(--column-width, fit-content);
+}
+
+.column-5 {
+  column-count: 5;
+  column-gap: var(--column-gap, 1rem);
+  width: var(--column-width, fit-content);
+}
+
+.column-6 {
+  column-count: 6;
+  column-gap: var(--column-gap, 1rem);
+  width: var(--column-width, fit-content);
+}
+
+.column-7 {
+  column-count: 7;
+  column-gap: var(--column-gap, 1rem);
+  width: var(--column-width, fit-content);
+}
+
+.column-8 {
+  column-count: 8;
+  column-gap: var(--column-gap, 1rem);
+  width: var(--column-width, fit-content);
+}
+
+.column-9 {
+  column-count: 9;
+  column-gap: var(--column-gap, 1rem);
+  width: var(--column-width, fit-content);
+}
+
+.column-10 {
+  column-count: 10;
+  column-gap: var(--column-gap, 1rem);
+  width: var(--column-width, fit-content);
+}
+
+.column-11 {
+  column-count: 11;
+  column-gap: var(--column-gap, 1rem);
+  width: var(--column-width, fit-content);
+}
+
+.column-12 {
+  column-count: 12;
+  column-gap: var(--column-gap, 1rem);
+  width: var(--column-width, fit-content);
+}
+
+.reel {
+  display: flex;
+  height: auto;
+  max-width: 100%;
+  margin-inline: var(--reel-margin-inline, auto);
+  padding: var(--reel-padding, 0.5rem);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.reel-item-width-auto {
+  --reel-item-width: auto;
+}
+.reel-space-0 {
+  --reel-space: 0;
+}
+.reel > * {
+  flex-basis: var(--reel-item-width, calc(33.333% - var(--reel-space, 1.25rem)));
+  flex-shrink: 0;
+}
+.reel > * + * {
+  margin-inline-start: var(--reel-space, 1.25rem);
+}
+.reel.scrollbar {
+  padding-block-end: clamp(1.375rem, 1.2rem + 0.89vw, 2rem);
+}
+.reel[data-scroll=snap] {
+  scroll-snap-type: x mandatory;
+}
+.reel[data-scroll=snap] > * {
+  scroll-snap-align: start;
+}
+
+/*
+<h2>Reel with scrollbar</h2> 
+<div class="reel scrollbar">
+  <div>Item</div>
+  <div>Item</div>
+  <div>Item</div>
+  <div>Item</div>
+  <div>Item</div>
+</div>
+
+
+<h2>Reel with snap</h2> 
+<div class="reel" data-scroll='snap'>
+  <div>Item</div>
+  <div>Item</div>
+  <div>Item</div>
+  <div>Item</div>
+  <div>Item</div>
+</div>
+*/
+.repel {
+  display: flex;
+  flex-wrap: var(--repel-wrap, wrap);
+  justify-content: space-between;
+  align-items: var(--repel-vertical-alignment, center);
+  gap: var(--gutter, clamp(1.375rem, 1.2rem + 0.89vw, 1rem));
+}
+
+/*
+<div class="repel">
+  <div>Item 1 repels item 2</div>
+  <div>Item 2 repels item 1</div>
+  <div>Item 3 repels item 1</div>
+</div>
+*/
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-col-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.flex-grow {
+  flex-grow: 1;
+}
+.flex-grow-1 {
+  flex-grow: 1;
+}
+.flex-grow-0 {
+  flex-grow: 0;
+}
+.flex-fill {
+  flex: 1 1 auto;
+}
+.flex-shrink {
+  flex-shrink: 1;
+}
+.flex-shrink-1 {
+  flex-shrink: 1;
+}
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.justify-content-start {
+  justify-content: flex-start;
+}
+.justify-content-start:is(.cluster) {
+  --cluster-horizontal-alignment: flex-start;
+}
+.justify-content-end {
+  justify-content: flex-end;
+}
+.justify-content-end:is(.cluster) {
+  --cluster-horizontal-alignment: flex-end;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-center:is(.cluster) {
+  --cluster-horizontal-alignment: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-between:is(.cluster) {
+  --cluster-horizontal-alignment: space-between;
+}
+.justify-content-around {
+  justify-content: space-around;
+}
+.justify-content-around:is(.cluster) {
+  --cluster-horizontal-alignment: space-around;
+}
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+.justify-content-evenly:is(.cluster) {
+  --cluster-horizontal-alignment: space-evenly;
+}
+.justify-items-start {
+  justify-items: flex-start;
+}
+.justify-items-end {
+  justify-items: flex-end;
+}
+.justify-items-center {
+  justify-items: center;
+}
+.justify-items-stretch {
+  justify-items: stretch;
+}
+.justify-self-auto {
+  justify-self: auto;
+}
+.justify-self-start {
+  justify-self: start;
+}
+.justify-self-end {
+  justify-self: end;
+}
+.justify-self-center {
+  justify-self: center;
+}
+.justify-self-stretch {
+  justify-self: stretch;
+}
+
+.align-content-center {
+  align-content: center;
+}
+.align-content-start {
+  align-content: flex-start;
+}
+.align-content-end {
+  align-content: flex-end;
+}
+.align-content-between {
+  align-content: space-between;
+}
+.align-content-around {
+  align-content: space-around;
+}
+.align-content-evenly {
+  align-content: space-evenly;
+}
+.align-content-baseline {
+  align-content: space-evenly;
+}
+.align-items-start {
+  align-items: flex-start;
+}
+.align-items-start:is(.repel, .cluster) {
+  --cluster-vertical-alignment: flex-start;
+  --repel-vertical-alignment: flex-start;
+}
+.align-items-end {
+  align-items: flex-end;
+}
+.align-items-end:is(.repel, .cluster) {
+  --cluster-vertical-alignment: flex-end;
+  --repel-vertical-alignment: flex-end;
+}
+.align-items-center {
+  align-items: center;
+}
+.align-items-center:is(.repel, .cluster) {
+  --cluster-vertical-alignment: center;
+  --repel-vertical-alignment: center;
+}
+.align-items-baseline {
+  align-items: baseline;
+}
+.align-items-baseline:is(.repel, .cluster) {
+  --cluster-vertical-alignment: baseline;
+  --repel-vertical-alignment: baseline;
+}
+.align-items-stretch {
+  align-items: stretch;
+}
+.align-items-stretch:is(.repel, .cluster) {
+  --cluster-vertical-alignment: stretch;
+  --repel-vertical-alignment: stretch;
+}
+.align-self-auto {
+  align-self: auto;
+}
+.align-self-start {
+  align-self: flex-start;
+}
+.align-self-end {
+  align-self: flex-end;
+}
+.align-self-center {
+  align-self: center;
+}
+.align-self-baseline {
+  align-self: baseline;
+}
+.align-self-stretch {
+  align-self: stretch;
+}
+
+.place-content-start {
+  place-content: flex-start;
+}
+.place-content-end {
+  place-content: flex-end;
+}
+.place-content-center {
+  place-content: center;
+}
+.place-content-between {
+  place-content: space-between;
+}
+.place-content-around {
+  place-content: space-around;
+}
+.place-content-evenly {
+  place-content: space-evenly;
+}
+.place-content-baseline {
+  place-content: baseline;
+}
+.place-content-stretch {
+  place-content: stretch;
+}
+.place-items-start {
+  place-items: flex-start;
+}
+.place-items-end {
+  place-items: flex-end;
+}
+.place-items-center {
+  place-items: center;
+}
+.place-items-baseline {
+  place-items: baseline;
+}
+.place-items-stretch {
+  place-items: stretch;
+}
+.place-self-auto {
+  place-self: auto;
+}
+.place-self-start {
+  place-self: flex-start;
+}
+.place-self-end {
+  place-self: flex-end;
+}
+.place-self-center {
+  place-self: center;
+}
+.place-self-stretch {
+  place-self: stretch;
+}
+
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1rem);
+}
+
+.flow > :where(:not(:first-child)) {
+  margin-block-start: var(--flow-space, 1em);
+}
+
+@font-face {
+  font-family: "Museo Slab 300";
+  src: url("https://static.mbopartners.com/portal/fonts/MuseoSlab-300.woff2") format("woff2"), url("https://static.mbopartners.com/portal/fonts/MuseoSlab-300.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Museo Slab 500";
+  src: url("https://static.mbopartners.com/portal/fonts/MuseoSlab-500.woff2") format("woff2"), url("https://static.mbopartners.com/portal/fonts/MuseoSlab-500.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/*:TODO  Need to grab the these custom props from design system */
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,69 @@
+:root {
+  /* heading variant variable */
+  --_text-primary: var(--color-primary-600);
+  --_text-secondary: var(--color-secondary-600);
+  --_text-action: var(--color-action-600);
+  --_text-white: var(--color-white);
+  --_text-success: var(--color-success-900);
+  --_text-attention: var(--color-attention-900);
+  --_text-error: var(--color-error-900);
+  --_text-light: var(--color-neutrals-400);
+  --_text-dark: var(--color-neutrals-900);
+
+}/* Heading style for dispaly */
+.display {
+    :is(h1, h2, h3, h4, h5, h6) {
+      font-family: var(--_ff-display500);
+    }
+    :is(.h1 .fl-heading-text) {
+      font-size: 56px;
+    }
+  }
+  /* Heading style for dispaly end */
+  /* Heading & body text color variant style */
+  .primary {
+    :is(h1, h2, h3, h4, h5, h6, p) {
+      color: var(--_text-primary);
+    }
+  }
+  .secondary {
+    :is(h1, h2, h3, h4, h5, h6, p) {
+      color: var(--_text-secondary);
+    }
+  }
+  .action {
+    :is(h1, h2, h3, h4, h5, h6, p) {
+      color: var(--_text-action);
+    }
+  }
+  .white {
+    :is(h1, h2, h3, h4, h5, h6, p) {
+      color: var(--_text-white);
+    }
+  }
+  .light {
+    :is(h1, h2, h3, h4, h5, h6, p) {
+      color: var(--_text-light);
+    }
+  }
+  .dark {
+    :is(h1, h2, h3, h4, h5, h6, p) {
+      color: var(--_text-dark);
+    }
+  }
+  .success {
+    :is(h1, h2, h3, h4, h5, h6, p) {
+      color: var(--_text-success);
+    }
+  }
+  .attention {
+    :is(h1, h2, h3, h4, h5, h6, p) {
+      color: var(--_text-attention);
+    }
+  }
+  .error {
+    :is(h1, h2, h3, h4, h5, h6, p) {
+      color: var(--_text-error);
+    }
+  }
+  /* heading color variant style end */

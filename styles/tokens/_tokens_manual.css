@@ -1,0 +1,6 @@
+:root {
+    /* local scopped variables */
+  --_ff-display300: var(--ff-museo300);
+  --_ff-display500: var(--ff-museo500);
+  --_ff-body: var(--ff-roboto);
+}
