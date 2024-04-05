@@ -604,6 +604,433 @@
   margin-block-start: var(--flow-space, 1em);
 }
 
+:root {
+  /* Link variables */
+  --_link-color: var(--color-primary-600);
+  --_link-color-hover: var(--color-primary-400);
+  --_link-color-white: var(--color-white);
+  /* Button variables */
+  --_btn-radius: var(4px);
+  --_btn-color-white: var(--color-white);
+  --_btn-bg-transparent: transparent;
+  --_btn-padding-lg: 8px 16px;
+  --_btn-padding-md: 8px 12px;
+  --_btn-padding-sm: 4px 12px;
+  /* default variable */
+  --_btn-bg-default: var(--_btn-bg-transparent);
+  --_btn-bg-default-hover: var(--color-primary-200);
+  --_btn-bg-default-active: transparent;
+  --_btn-color-default: var(--color-primary-600);
+  --_btn-color-default-hover: var(--color-primary-400);
+  --_btn-color-default-active: var(--color-primary-800);
+  /* back btn variables */
+  --_btn-color-back: var(--color-primary-600);
+  --_btn-color-back-hover: var(--color-primary-400);
+  --_btn-color-back-active: var(--color-primary-800);
+  /* back_inverted btn variables */
+  --_btn-color-back-inverted: var(--color-white);
+  --_btn-color-back-inverted-hover: var(--color-white);
+  --_btn-color-back-inverted-active: var(--color-white);
+  /* btn__inverted */
+  --_btn-bg-inverted: var(--_btn-bg-default);
+  --_btn-color-inverted: var(--color-white);
+  --_btn-inverted-outline-hover: var(--color-white);
+  /* action varaible */
+  --_btn-bg-action: var(--color-action-400);
+  --_btn-bg-action-hover: var(--color-action-300);
+  --_btn-bg-action-active: var(--color-action-600);
+  --_btn-color-action-hover: var(--color-white);
+  --_btn-color-action-active: var(--color-white);
+}
+
+/* Link style here */
+.fl-module-content .fl-rich-text a {
+  color: var(--_link-color);
+  text-decoration: var(--_link-text-decoration, none) !important;
+  text-underline-offset: 4px;
+}
+.fl-module-content .fl-rich-text a:hover {
+  --_link-text-decoration: none;
+  --_link-color: var(--_link-color-hover);
+}
+.fl-module-content .fl-rich-text a.white {
+  --_link-color: var(--_link-color-white);
+}
+.fl-module-content .fl-rich-text a.white:hover {
+  --_link-color: var(--_link-color-white);
+}
+
+/* white link text area  */
+.white .fl-module-content .fl-rich-text a {
+  --_link-color: var(--_link-color-white);
+}
+.white .fl-module-content .fl-rich-text a:hover {
+  --_link-color: var(--_link-color-white);
+}
+
+/* Link style end here */
+/* Button style here */
+/* btn genral style */
+.fl-page {
+  /* button default variant */
+  /* button default variant end */
+  /* button back variant */
+  /* button back variant end */
+  /* btn__back_inverted */
+  /* btn__back_inverted end */
+  /* btn__inverted */
+  /* btn__inverted */
+  /* btn__inverted end */
+  /* primary variant */
+  /* primary variant end */
+  /* action variant */
+  /* action variant end */
+}
+.fl-page a.fl-button {
+  border-radius: var(--_btn-radius);
+  padding: var(--_btn-padding, 16px 24px);
+  font-size: var(--_btn-fs, 18px) !important;
+  border-radius: var(--_btn-radius, 4px);
+  color: var(--_btn-color, var(--color-white));
+}
+.fl-page .lg a.fl-button {
+  --_btn-padding: var(--_btn-padding-lg);
+  --_btn-fs: 16px;
+}
+.fl-page .md a.fl-button {
+  --_btn-padding: var(--_btn-padding-md);
+  --_btn-fs: 12px;
+}
+.fl-page .sm a.fl-button {
+  --_btn-padding: var(--_btn-padding-sm);
+  --_btn-fs: 12px;
+}
+.fl-page :where(.btn__action, .btn__primary, .btn__inverted .btn__back_inverted) a.fl-button * {
+  /* --_btn-color: var(--_btn-color-white) !important; */
+  color: var(--_btn-color-white) !important;
+  font-size: inherit;
+}
+.fl-page :where(.btn__default, .btn__back) a.fl-button * {
+  color: var(--_btn-color-default) !important;
+}
+.fl-page .btn__default a.fl-button {
+  background-color: var(--_btn-bg-default) !important;
+  color: var(--_btn-color-default) !important;
+}
+.fl-page .btn__default a.fl-button:hover {
+  --_btn-bg-default: var(--_btn-bg-default-hover);
+  --_btn-color-default: var(--_btn-color-default-hover);
+}
+.fl-page .btn__default a.fl-button:is(:active, :focus) {
+  --_btn-bg-default: var(--_btn-bg-default-active);
+  --_btn-color-default: var(--_btn-color-default-active);
+}
+.fl-page .btn__back a.fl-button {
+  background-color: var(--_btn-bg-transparent) !important;
+  color: var(--_btn-color-back) !important;
+}
+.fl-page .btn__back a.fl-button:hover {
+  --_btn-color-back: var(--_btn-color-back-hover);
+}
+.fl-page .btn__back a.fl-button:is(:active, :focus) {
+  --_btn-color-back: var(--_btn-color-back-active);
+}
+.fl-page .btn__back_inverted a.fl-button {
+  background-color: var(--_btn-bg-default) !important;
+  color: var(--_btn-color-back-inverted) !important;
+}
+.fl-page .btn__back_inverted a.fl-button:hover {
+  --_btn-bg-default: var(--_btn-bg-default);
+  --_btn-color-back-inverted: var(
+    --_btn-color-back-inverted-hover
+  ) !important;
+}
+.fl-page .btn__back_inverted a.fl-button:is(:active, :focus) {
+  --_btn-color-back-inverted: var(--_btn-color-back-inverted-active);
+}
+.fl-page .btn__inverted a.fl-button {
+  background-color: var(--_btn-bg-default) !important;
+  color: var(--_btn-color-inverted) !important;
+  outline: 1px solid var(--_btn-outline-color, transparent);
+}
+.fl-page .btn__inverted a.fl-button:hover {
+  --_btn-bg-default: var(--_btn-bg-default);
+  --_btn-color: var(--_btn-color-inverted-hover);
+  --_btn-outline-color: var(--_btn-inverted-outline-hover);
+}
+.fl-page .btn__inverted a.fl-button:is(:active, :focus) {
+  --_btn-color: var(--_btn-color-inverted-active);
+}
+.fl-page .btn__primary a.fl-button {
+  background-color: var(--_btn-bg-primary) !important;
+  color: var(--_btn-color-white) !important;
+}
+.fl-page .btn__primary a.fl-button:hover {
+  --_btn-bg-primary: var(--_btn-bg-primary-hover);
+  --_btn-color: var(--_btn-color-primary-hover);
+}
+.fl-page .btn__primary a.fl-button:is(:active, :focus) {
+  --_btn-bg-primary: var(--_btn-bg-primary-active);
+  --_btn-color: var(--_btn-color-primary-active);
+}
+.fl-page .btn__action a.fl-button {
+  background-color: var(--_btn-bg-action) !important;
+  color: var(--_btn-color-white) !important;
+}
+.fl-page .btn__action a.fl-button:hover {
+  --_btn-bg-action: var(--_btn-bg-action-hover);
+  --_btn-color: var(--_btn-color-action-hover);
+}
+.fl-page .btn__action a.fl-button:is(:active, :focus) {
+  --_btn-bg-action: var(--_btn-bg-action-active);
+  --_btn-color: var(--_btn-color-action-active);
+}
+
+.footer_links {
+  --_footer-link-color:var(--color-neutrals-400);
+  --_footer-link-color-hover: var(--color-primary-400);
+}
+.footer_links :is(a, .uabb-modal-action) {
+  text-decoration: var(--_footer-link-decoration) !important;
+  text-underline-offset: 3px;
+  color: var(--_footer-link-color);
+}
+.footer_links :is(a, .uabb-modal-action):hover {
+  --_footer-link-color:var(--_footer-link-color-hover);
+  --_footer-link-decoration:underline;
+}
+.footer_links :is(.cookie_prefrences) {
+  font-size: 12px;
+}
+@media (width > 768px) {
+  .footer_links :is(.cookie_prefrences) {
+    text-align: end;
+  }
+}
+
+/* footer links style */
+:root {
+  /* heading variant variable */
+  --_text-primary: var(--color-primary-600);
+  --_text-secondary: var(--color-secondary-600);
+  --_text-action: var(--color-action-600);
+  --_text-white: var(--color-white);
+  --_text-success: var(--color-success-900);
+  --_text-attention: var(--color-attention-900);
+  --_text-error: var(--color-error-900);
+  --_text-light: var(--color-neutrals-400);
+  --_text-dark: var(--color-neutrals-900);
+} /* Heading style for dispaly */
+.display :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--_ff-display500);
+}
+.display :is(.h1 .fl-heading-text) {
+  font-size: 56px;
+}
+
+/* Heading style for dispaly end */
+/* Heading & body text color variant style */
+.primary :is(h1, h2, h3, h4, h5, h6, p) {
+  color: var(--_text-primary);
+}
+
+.secondary :is(h1, h2, h3, h4, h5, h6, p) {
+  color: var(--_text-secondary);
+}
+
+.action :is(h1, h2, h3, h4, h5, h6, p) {
+  color: var(--_text-action);
+}
+
+.white :is(h1, h2, h3, h4, h5, h6, p) {
+  color: var(--_text-white);
+}
+
+.light :is(h1, h2, h3, h4, h5, h6, p) {
+  color: var(--_text-light);
+}
+
+.dark :is(h1, h2, h3, h4, h5, h6, p) {
+  color: var(--_text-dark);
+}
+
+.success :is(h1, h2, h3, h4, h5, h6, p) {
+  color: var(--_text-success);
+}
+
+.attention :is(h1, h2, h3, h4, h5, h6, p) {
+  color: var(--_text-attention);
+}
+
+.error :is(h1, h2, h3, h4, h5, h6, p) {
+  color: var(--_text-error);
+}
+
+/* heading color variant style end */
+/* FAQ table designs style */
+.mbo_table_global {
+  --_mbo-table-global-header-bg: var(--color-secondary-400);
+  --_mbo-table-global-header-color: var(--color-white);
+  --_mbo_table_global-body-bg: var(--color-white);
+}
+.mbo_table_global th {
+  background: var(--_mbo-table-global-header-bg);
+  color: var(--_mbo-table-global-header-color);
+  padding: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+.mbo_table_global td:not(:last-child),
+.mbo_table_global th:not(:last-child) {
+  position: relative;
+}
+.mbo_table_global td:not(:last-child)::after,
+.mbo_table_global th:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 0;
+  border-right: 1px solid var(--color-border-default);
+  bottom: 12px;
+}
+.mbo_table_global td {
+  width: auto;
+  padding: 30px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: left;
+  background: var(--_mbo_table_global-body-bg);
+  box-shadow: 0px -2px 0px 0px rgba(7, 103, 125, 0.2509803922) inset;
+  vertical-align: top;
+}
+.mbo_table_global td ul {
+  margin-left: -30px !important;
+}
+
+/* FAQ table designs style end */
+/* uabb-table style  */
+.mbo_table {
+  --_mbo-table-header-color: var(--color-white);
+  --_uabb-table-features-bg: var(--color-white);
+  --_mbo-table-header-bg: var(--color-secondary-400);
+}
+.mbo_table .uabb-table-header {
+  --_mbo-table-border-color: var(--color-neutrals-white-300);
+  background: var(--_mbo-table-header-bg);
+  color: var(--_mbo-table-header-color);
+}
+.mbo_table .uabb-table-header label.head-inner-text {
+  font-weight: normal;
+}
+.mbo_table .uabb-table-header th {
+  position: relative;
+  font-weight: normal;
+  border: none !important;
+}
+.mbo_table .uabb-table-header th:not(:last-child) :before {
+  content: "";
+  top: 12px;
+  bottom: 12px;
+  right: 0;
+  position: absolute;
+  background: var(--_mbo-table-border-color);
+  width: 1px;
+}
+.mbo_table .uabb-table-features {
+  background: var(--_uabb-table-features-bg);
+}
+.mbo_table .uabb-table-features td {
+  position: relative;
+  border: none !important;
+}
+.mbo_table .uabb-table-features td:not(:last-child) :before {
+  --_mbo-table-border-color: var(--color-border-default);
+  content: "";
+  top: 12px;
+  bottom: 12px;
+  right: 0;
+  position: absolute;
+  background: var(--_mbo-table-border-color);
+  width: 1px;
+}
+.mbo_table .uabb-table-features td:after {
+  --_mbo-table-border-color: #07677d40;
+  content: "";
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  background: var(--_mbo-table-border-color);
+  height: 1px;
+}
+
+/* uabb-table style end here */
+/* Style for new social icon style */
+.mbo_social {
+  --_social-icon-gap: 0.5rem;
+  --_social-link-padding: 0.25rem 0.5rem;
+  --_social-link-bg: transparent;
+  --_social-link-fill: var(--color-neutrals-400);
+  --_social-icon-size: 1.75rem;
+  --_social-link-gap: 0.25rem;
+  --_social-link-color: var(--color-neutrals-400);
+  --_social-icon-gap: 1.5rem;
+  --_social-link-fill-hover: var(--color-primary-400);
+  display: grid;
+  grid-auto-flow: column;
+  margin: 0;
+  padding: 0;
+  list-style: none !important;
+  gap: var(--_social-icon-gap, 0.5rem);
+  justify-content: var(--_social-link-alignment, start);
+}
+@media (width < 36rem) {
+  .mbo_social {
+    --_social-link-indent: -1000px;
+    --_social-link-gap: 0;
+  }
+}
+.mbo_social[data-align=center] {
+  --_social-link-alignment: center;
+}
+.mbo_social[data-align=end] {
+  --_social-link-alignment: flex-end;
+}
+.mbo_social svg {
+  width: var(--_social-icon-size, 1.75rem);
+  aspect-ratio: 1;
+}
+.mbo_social__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: var(--_social-link-padding);
+  gap: var(--_social-link-gap, 0.25rem);
+  text-indent: var(--_social-link-indent);
+  font-size: 1rem;
+  width: auto;
+  background: var(--_social-link-bg, transparent);
+  color: var(--_social-link-color) !important;
+  fill: var(--_social-link-color);
+}
+.mbo_social__link:is(:hover) {
+  --_social-link-color: var(--_social-link-color-hover);
+}
+.mbo_social.footer {
+  --_social-icon-gap: 0.5rem;
+  --_social-link-padding: 0.125rem;
+  --_social-link-color: var(--color-neutrals-400);
+  --_social-link-color-hover: var(--color-primary-400);
+}
+@media (width > 48rem) {
+  .mbo_social.footer {
+    --_social-link-alignment: flex-end;
+  }
+}
+
+/* social link style end  */
 @font-face {
   font-family: "Museo Slab 300";
   src: url("https://static.mbopartners.com/portal/fonts/MuseoSlab-300.woff2") format("woff2"), url("https://static.mbopartners.com/portal/fonts/MuseoSlab-300.woff") format("woff");
