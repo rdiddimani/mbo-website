@@ -1,0 +1,73 @@
+/* accordion style here */
+.faq_accordion {
+    --_accordion-label-color: var(--color-primary-600);
+    --_accordion-arrow-up:url("/wp-content/uploads/2024/03/acordion_up_arrow.png");
+    --_accordion-arrow-down:url("/wp-content/uploads/2024/03/accordion_down_arrow.png");
+  
+  .pp-accordion-button-label {
+      border-bottom: 0.5px solid var(--color-primary-300);
+      padding-bottom: 30px;
+        span {
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 32px;
+            text-align: center;
+            color: var(--_accordion-label-color);
+            margin-right: 25px;
+              @media (width <= 768px) {
+              margin-right: 10px;
+          }
+          }  
+          // .pp-accordion-button-label span end 
+          &:nth-last-child {
+            border-bottom: 0px !important;
+          }
+          
+          @media (width <= 768px) {
+              flex-wrap: inherit;
+          }
+  } 
+  // .pp-accordion-button-label end 
+      
+      .dashicons-arrow-up-alt2::before {
+        content: var(--_accordion-arrow-up) !important;
+      }
+      // .dashicons-arrow-up-alt2 end 
+      .dashicons-arrow-down-alt2:before {
+        content: var(--_accordion-arrow-down) !important;
+      }
+      // .dashicons-arrow-down-alt2 end 
+      
+      .pp-accordion-item {
+          border-box: 0 !important;
+          .pp-accordion-button-icon {
+              &.pp-accordion-icon-right {
+                margin-top: -45px !important;
+              }
+              // pp-accordion-icon-right end 
+          }
+          // pp-accordion-button-icon end
+          
+          .pp-accordion-content {
+              padding-top: 38px;
+              &:before {
+                position: relative;
+                margin-left: -9px;
+                margin-top: -54px;
+                margin-bottom: 30px;
+                width: 0;
+                height: 0;
+                border-bottom: 16px solid var(--color-white);
+                border-left: 14px solid transparent;
+                border-right: 14px solid transparent;
+              }
+              // .pp-accordion-content:before end 
+          }
+          // .pp-accordion-content end 
+          
+      }
+      // .pp-accordion-item end 
+  }
+  // .faq_accordion end 
+  
+  /* accordion global styles ends here */
