@@ -14,7 +14,7 @@
     grid-auto-flow: column;
     margin: 0;
     padding: 0;
-    list-style: none !important;
+    list-style: none;
     gap: var(--_social-icon-gap, 0.5rem);
     justify-content: var(--_social-link-alignment, start);
   
@@ -43,7 +43,7 @@
     font-size: 1rem;
     width: auto;
     background: var(--_social-link-bg, transparent);
-    color: var(--_social-link-color) !important;
+    color: var(--_social-link-color);
     fill: var(--_social-link-color);
     &:is(:hover){
       --_social-link-color: var(--_social-link-color-hover);
