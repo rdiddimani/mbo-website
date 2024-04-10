@@ -1,12 +1,14 @@
 .footer_links {
   --_footer-link-color: var(--color-neutrals-400);
   --_footer-link-color-hover: var(--color-primary-400);
+  --_footer-link-decoration: none;
   :is(a, .uabb-modal-action) {
     text-decoration: var(--_footer-link-decoration);
     text-underline-offset: 3px;
     color: var(--_footer-link-color);
-    &:hover {
+    &:hover, &:active {
       --_footer-link-color: var(--_footer-link-color-hover);
+      --_footer-link-decoration: underline;
     }
   }
   :is(.cookie_prefrences) {
