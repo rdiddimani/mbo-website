@@ -50,7 +50,7 @@
 
 .fl-module-content .fl-rich-text a {
   color: var(--_link-color);
-  text-decoration: var(--_link-text-decoration, none) !important;
+  text-decoration: var(--_link-text-decoration, none);
   text-underline-offset: 4px;
   &:hover {
     --_link-text-decoration: none;
@@ -58,6 +58,7 @@
   }
   &.white {
     --_link-color: var(--_link-color-white);
+    --_link-text-decoration: underline;
     &:hover {
       --_link-color: var(--_link-color-white);
     }
@@ -66,6 +67,7 @@
 /* white link text area  */
 .white .fl-module-content .fl-rich-text a {
   --_link-color: var(--_link-color-white);
+  --_link-text-decoration: underline;
   &:hover {
     --_link-color: var(--_link-color-white);
   }
@@ -78,7 +80,7 @@
   a.fl-button {
     border-radius: var(--_btn-radius);
     padding: var(--_btn-padding, 16px 24px);
-    font-size: var(--_btn-fs, 18px) !important;
+    font-size: var(--_btn-fs, 18px);
     border-radius: var(--_btn-radius, 4px);
     color: var(--_btn-color, var(--color-white));
   }
@@ -103,19 +105,19 @@
   :where(.btn__action, .btn__primary, .btn__inverted .btn__back_inverted)
     a.fl-button
     * {
-    /* --_btn-color: var(--_btn-color-white) !important; */
-    color: var(--_btn-color-white) !important;
+    /* --_btn-color: var(--_btn-color-white); */
+    color: var(--_btn-color-white);
     font-size: inherit;
   }
   :where(.btn__default, .btn__back) a.fl-button * {
-    color: var(--_btn-color-default) !important;
+    color: var(--_btn-color-default);
   }
   // button common style end
 
   /* button default variant */
   .btn__default a.fl-button {
-    background-color: var(--_btn-bg-default) !important;
-    color: var(--_btn-color-default) !important;
+    background-color: var(--_btn-bg-default);
+    color: var(--_btn-color-default);
     &:hover {
       --_btn-bg-default: var(--_btn-bg-default-hover);
       --_btn-color-default: var(--_btn-color-default-hover);
@@ -128,8 +130,8 @@
   /* button default variant end */
   /* button back variant */
   .btn__back a.fl-button {
-    background-color: var(--_btn-bg-transparent) !important;
-    color: var(--_btn-color-back) !important;
+    background-color: var(--_btn-bg-transparent);
+    color: var(--_btn-color-back);
     &:hover {
       --_btn-color-back: var(--_btn-color-back-hover);
     }
@@ -140,13 +142,13 @@
   /* button back variant end */
   /* btn__back_inverted */
   .btn__back_inverted a.fl-button {
-    background-color: var(--_btn-bg-default) !important;
-    color: var(--_btn-color-back-inverted) !important;
+    background-color: var(--_btn-bg-default);
+    color: var(--_btn-color-back-inverted);
     &:hover {
       --_btn-bg-default: var(--_btn-bg-default);
       --_btn-color-back-inverted: var(
         --_btn-color-back-inverted-hover
-      ) !important;
+      );
     }
     &:is(:active, :focus) {
       --_btn-color-back-inverted: var(--_btn-color-back-inverted-active);
@@ -156,8 +158,8 @@
   /* btn__inverted */
   /* btn__inverted */
   .btn__inverted a.fl-button {
-    background-color: var(--_btn-bg-default) !important;
-    color: var(--_btn-color-inverted) !important;
+    background-color: var(--_btn-bg-default);
+    color: var(--_btn-color-inverted);
     outline: 1px solid var(--_btn-outline-color, transparent);
     &:hover {
       --_btn-bg-default: var(--_btn-bg-default);
@@ -171,8 +173,8 @@
   /* btn__inverted end */
   /* primary variant */
   .btn__primary a.fl-button {
-    background-color: var(--_btn-bg-primary) !important;
-    color: var(--_btn-color-white) !important;
+    background-color: var(--_btn-bg-primary);
+    color: var(--_btn-color-white);
     &:hover {
       --_btn-bg-primary: var(--_btn-bg-primary-hover);
       --_btn-color: var(--_btn-color-primary-hover);
@@ -186,8 +188,8 @@
 
   /* action variant */
   .btn__action a.fl-button {
-    background-color: var(--_btn-bg-action) !important;
-    color: var(--_btn-color-white) !important;
+    background-color: var(--_btn-bg-action);
+    color: var(--_btn-color-white);
     &:hover {
       --_btn-bg-action: var(--_btn-bg-action-hover);
       --_btn-color: var(--_btn-color-action-hover);

@@ -38,7 +38,7 @@
     box-shadow: 0px -2px 0px 0px #07677d40 inset;
     vertical-align: top;
     ul {
-      margin-left: -30px !important;
+      margin-left: -30px;
     }
   }
 }
@@ -62,7 +62,7 @@
     th {
       position: relative;
       font-weight: normal;
-      border: none !important;
+      border: none;
       &:not(:last-child) :before {
         content: "";
         top: 12px;
@@ -81,7 +81,7 @@
     background: var(--_uabb-table-features-bg);
     td {
       position: relative;
-      border: none !important;
+      border: none;
 
       &:not(:last-child) :before {
         --_mbo-table-border-color: var(--color-border-default);
