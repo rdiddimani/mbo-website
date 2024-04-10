@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "https://static.mbopartners.com/portal/colors/tokens-29_06_2023-v1.css";
+@import url("https://static.mbopartners.com/portal/colors/tokens-29_06_2023-v1.css");
 :root {
   /* local scopped variables */
   --_ff-display300: var(--ff-museo300);
