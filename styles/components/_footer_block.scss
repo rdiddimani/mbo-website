@@ -3,7 +3,7 @@
   --_footer-link-color-hover: var(--color-primary-400);
   --_footer-link-decoration: none;
   :is(a, .uabb-modal-action) {
-    text-decoration: var(--_footer-link-decoration);
+    text-decoration: var(--_footer-link-decoration) !important;
     text-underline-offset: 3px;
     color: var(--_footer-link-color);
     &:hover, &:active {
