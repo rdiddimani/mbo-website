@@ -437,7 +437,7 @@
   }
 }
 .faq_accordion .pp-accordion-button-label:nth-last-child {
-  border-bottom: 0px !important;
+  border-bottom: 0px;
 }
 @media (width <= 768px) {
   .faq_accordion .pp-accordion-button-label {
@@ -445,16 +445,16 @@
   }
 }
 .faq_accordion .dashicons-arrow-up-alt2::before {
-  content: var(--_accordion-arrow-up) !important;
+  content: var(--_accordion-arrow-up);
 }
 .faq_accordion .dashicons-arrow-down-alt2:before {
-  content: var(--_accordion-arrow-down) !important;
+  content: var(--_accordion-arrow-down);
 }
 .faq_accordion .pp-accordion-item {
-  border-box: 0 !important;
+  border-box: 0;
 }
 .faq_accordion .pp-accordion-item .pp-accordion-button-icon.pp-accordion-icon-right {
-  margin-top: -45px !important;
+  margin-top: -45px;
 }
 .faq_accordion .pp-accordion-item .pp-accordion-content {
   padding-top: 38px;
@@ -514,7 +514,7 @@
 /* Link style here */
 .fl-module-content .fl-rich-text a {
   color: var(--_link-color);
-  text-decoration: var(--_link-text-decoration, none) !important;
+  text-decoration: var(--_link-text-decoration, none);
   text-underline-offset: 4px;
 }
 .fl-module-content .fl-rich-text a:hover {
@@ -523,6 +523,7 @@
 }
 .fl-module-content .fl-rich-text a.white {
   --_link-color: var(--_link-color-white);
+  --_link-text-decoration: underline;
 }
 .fl-module-content .fl-rich-text a.white:hover {
   --_link-color: var(--_link-color-white);
@@ -531,6 +532,7 @@
 /* white link text area  */
 .white .fl-module-content .fl-rich-text a {
   --_link-color: var(--_link-color-white);
+  --_link-text-decoration: underline;
 }
 .white .fl-module-content .fl-rich-text a:hover {
   --_link-color: var(--_link-color-white);
@@ -557,7 +559,7 @@
 .fl-page a.fl-button {
   border-radius: var(--_btn-radius);
   padding: var(--_btn-padding, 16px 24px);
-  font-size: var(--_btn-fs, 18px) !important;
+  font-size: var(--_btn-fs, 18px);
   border-radius: var(--_btn-radius, 4px);
   color: var(--_btn-color, var(--color-white));
 }
@@ -574,16 +576,16 @@
   --_btn-fs: 12px;
 }
 .fl-page :where(.btn__action, .btn__primary, .btn__inverted .btn__back_inverted) a.fl-button * {
-  /* --_btn-color: var(--_btn-color-white) !important; */
-  color: var(--_btn-color-white) !important;
+  /* --_btn-color: var(--_btn-color-white); */
+  color: var(--_btn-color-white);
   font-size: inherit;
 }
 .fl-page :where(.btn__default, .btn__back) a.fl-button * {
-  color: var(--_btn-color-default) !important;
+  color: var(--_btn-color-default);
 }
 .fl-page .btn__default a.fl-button {
-  background-color: var(--_btn-bg-default) !important;
-  color: var(--_btn-color-default) !important;
+  background-color: var(--_btn-bg-default);
+  color: var(--_btn-color-default);
 }
 .fl-page .btn__default a.fl-button:hover {
   --_btn-bg-default: var(--_btn-bg-default-hover);
@@ -594,8 +596,8 @@
   --_btn-color-default: var(--_btn-color-default-active);
 }
 .fl-page .btn__back a.fl-button {
-  background-color: var(--_btn-bg-transparent) !important;
-  color: var(--_btn-color-back) !important;
+  background-color: var(--_btn-bg-transparent);
+  color: var(--_btn-color-back);
 }
 .fl-page .btn__back a.fl-button:hover {
   --_btn-color-back: var(--_btn-color-back-hover);
@@ -604,21 +606,21 @@
   --_btn-color-back: var(--_btn-color-back-active);
 }
 .fl-page .btn__back_inverted a.fl-button {
-  background-color: var(--_btn-bg-default) !important;
-  color: var(--_btn-color-back-inverted) !important;
+  background-color: var(--_btn-bg-default);
+  color: var(--_btn-color-back-inverted);
 }
 .fl-page .btn__back_inverted a.fl-button:hover {
   --_btn-bg-default: var(--_btn-bg-default);
   --_btn-color-back-inverted: var(
     --_btn-color-back-inverted-hover
-  ) !important;
+  );
 }
 .fl-page .btn__back_inverted a.fl-button:is(:active, :focus) {
   --_btn-color-back-inverted: var(--_btn-color-back-inverted-active);
 }
 .fl-page .btn__inverted a.fl-button {
-  background-color: var(--_btn-bg-default) !important;
-  color: var(--_btn-color-inverted) !important;
+  background-color: var(--_btn-bg-default);
+  color: var(--_btn-color-inverted);
   outline: 1px solid var(--_btn-outline-color, transparent);
 }
 .fl-page .btn__inverted a.fl-button:hover {
@@ -630,8 +632,8 @@
   --_btn-color: var(--_btn-color-inverted-active);
 }
 .fl-page .btn__primary a.fl-button {
-  background-color: var(--_btn-bg-primary) !important;
-  color: var(--_btn-color-white) !important;
+  background-color: var(--_btn-bg-primary);
+  color: var(--_btn-color-white);
 }
 .fl-page .btn__primary a.fl-button:hover {
   --_btn-bg-primary: var(--_btn-bg-primary-hover);
@@ -642,8 +644,8 @@
   --_btn-color: var(--_btn-color-primary-active);
 }
 .fl-page .btn__action a.fl-button {
-  background-color: var(--_btn-bg-action) !important;
-  color: var(--_btn-color-white) !important;
+  background-color: var(--_btn-bg-action);
+  color: var(--_btn-color-white);
 }
 .fl-page .btn__action a.fl-button:hover {
   --_btn-bg-action: var(--_btn-bg-action-hover);
@@ -655,7 +657,7 @@
 }
 
 .footer_links {
-  --_footer-link-color:var(--color-neutrals-400);
+  --_footer-link-color: var(--color-neutrals-400);
   --_footer-link-color-hover: var(--color-primary-400);
 }
 .footer_links :is(a, .uabb-modal-action) {
@@ -664,8 +666,7 @@
   color: var(--_footer-link-color);
 }
 .footer_links :is(a, .uabb-modal-action):hover {
-  --_footer-link-color:var(--_footer-link-color-hover);
-  --_footer-link-decoration:underline;
+  --_footer-link-color: var(--_footer-link-color-hover);
 }
 .footer_links :is(.cookie_prefrences) {
   font-size: 12px;
@@ -774,7 +775,7 @@
   vertical-align: top;
 }
 .mbo_table_global td ul {
-  margin-left: -30px !important;
+  margin-left: -30px;
 }
 
 /* FAQ table designs style end */
@@ -795,7 +796,7 @@
 .mbo_table .uabb-table-header th {
   position: relative;
   font-weight: normal;
-  border: none !important;
+  border: none;
 }
 .mbo_table .uabb-table-header th:not(:last-child) :before {
   content: "";
@@ -811,7 +812,7 @@
 }
 .mbo_table .uabb-table-features td {
   position: relative;
-  border: none !important;
+  border: none;
 }
 .mbo_table .uabb-table-features td:not(:last-child) :before {
   --_mbo-table-border-color: var(--color-border-default);
@@ -850,7 +851,7 @@
   grid-auto-flow: column;
   margin: 0;
   padding: 0;
-  list-style: none !important;
+  list-style: none;
   gap: var(--_social-icon-gap, 0.5rem);
   justify-content: var(--_social-link-alignment, start);
 }
@@ -880,7 +881,7 @@
   font-size: 1rem;
   width: auto;
   background: var(--_social-link-bg, transparent);
-  color: var(--_social-link-color) !important;
+  color: var(--_social-link-color);
   fill: var(--_social-link-color);
 }
 .mbo_social__link:is(:hover) {
