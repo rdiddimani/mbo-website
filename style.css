@@ -659,14 +659,16 @@
 .footer_links {
   --_footer-link-color: var(--color-neutrals-400);
   --_footer-link-color-hover: var(--color-primary-400);
+  --_footer-link-decoration: none;
 }
 .footer_links :is(a, .uabb-modal-action) {
-  text-decoration: var(--_footer-link-decoration);
+  text-decoration: var(--_footer-link-decoration) !important;
   text-underline-offset: 3px;
   color: var(--_footer-link-color);
 }
-.footer_links :is(a, .uabb-modal-action):hover {
+.footer_links :is(a, .uabb-modal-action):hover, .footer_links :is(a, .uabb-modal-action):active {
   --_footer-link-color: var(--_footer-link-color-hover);
+  --_footer-link-decoration: underline;
 }
 .footer_links :is(.cookie_prefrences) {
   font-size: 12px;
