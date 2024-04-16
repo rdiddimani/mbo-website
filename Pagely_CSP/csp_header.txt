@@ -1,5 +1,5 @@
 default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:
-https://go.mbopartners.com/analytics/ https://cse.expertrec.com/ https://clients1.google.com/ https://www.mbopartners.com/
+https://go.mbopartners.com/analytics/ *.expertrec.com https://cse.expertrec.com/ https://clients1.google.com/ https://www.mbopartners.com/
 https://www2.mbopartners.com/ https://go.mbopartners.com/ https://s29814.pcdn.co
 https://cmp.osano.com/ https://www.googletagmanager.com
 https://consent.trustarc.com https://www.google.com https://cse.google.com
@@ -14,7 +14,7 @@ https://maps.googleapis.com/ https://platform.twitter.com/
 https://partner.googleadservices.com/ https://consent.api.osano.com/
 https://*.wistia.com/ https://*.wistia.net/ https://src.litix.io/
 https://e.infogram.com/; worker-src 'self' blob:; connect-src 'self'
-https://expertrec.com/ https://www.google-analytics.com/ https://pagead2.googlesyndication.com/
+*.expertrec.com https://www.google-analytics.com/ https://pagead2.googlesyndication.com/
 https://mbo.my.salesforce-sites.com/ https://*.litix.io/ https://*.wistia.com/
 https://*.wistia.net/ https://*.algolia.net/ https://fast.wistia.com/
 https://connect-api.mbopartners.com https://connect-api-qa.mbopartners.com/
