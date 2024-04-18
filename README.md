@@ -6,3 +6,7 @@
 
 ## Complie SCSS to CSS with following command
 - sass style.scss style.css
+
+## Upload the style.css to following path
+
+- /wp-content/themes/bb-theme-child/style.css
